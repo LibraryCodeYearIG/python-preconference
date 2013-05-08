@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+.step h1 {
+  border: 0;
+}
+
+span.prefix {
+  font-size: 0.7em;
+  padding-left: 8px;
+}
+
+.step h1 {
+  font-size: 1em;
+  padding: 10px 0 0 10px;
+}
+
+.step h1 span.prefix {
+  font-size: 0.9em;
+  padding-left: 0;
+  padding-right: 8px;
+}
+
+img.noborder {
+  border: none;
+  display: inline;
+}
+
+.centered {
+  text-align: center;
+}
+
+.message img.icon {
+  float: left;
+  border: none;
+  margin-right: 1em;
+}
+
+.message.todo {
+  margin: 1em;
+  background-color: #f5e1f0;
+  font-style: italic;
+  padding: .25em 1em;
+}
+
+.important, .tip {
+  padding: .5em 1em;
+  margin: 1em 0;
+}
+
+.important {
+  border: 5px solid maroon;
+}
+
+.pertinent-info {
+  padding: 1em;
+  font-size: 0.8em;
+  font-color: rgb(60, 60, 60);
+  border: 3px solid grey;
+  border-radius: 10px;
+}
+
+.pertinent-info h3 {
+  text-align: center;
+  margin: 0;
+}
+
+.tip {
+  padding: 1em;
+  border: 10px solid #eee;
+}
+
+.tip > span {
+  font-size: 14pt;
+}
+
+.tip span.name {
+  font-weight: bold;
+}
+
+.tip span.prefix {
+  font-weight: bold;
+  color: #E77902;
+}
+
+.step.next_step p.link:after {
+  content: " →";
+}
+
+div.back:before {
+  content: "← ";
+}
+
+.doc > div {
+  padding-bottom: 1em;
+}
+
+table.bordered td,
+table.bordered tr {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.requirements > h1:before,
+.discussion > h1:before,
+.hints > h1:before,
+.tools_and_references > h1:before,
+.goals > h1:before,
+.steps > h1:before,
+.explanation > h1:before,
+.deploying > h1:before,
+.overview > h1:before,
+.further-reading > h1:before {
+  content: "\00a0";
+  display: inline-block;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.goals > h1:before {
+  background-color: #FECACD;
+}
+
+.steps > h1:before {
+  background-color: #FBFFCA;
+}
+
+.explanation > h1:before {
+  background-color: #C8FFC9;
+}
+
+.overview > h1:before {
+  background-color: rgb(176, 220, 250);
+}
+
+.deploying > h1:before {
+  background-color: #B0DEE7;
+}
+
+.further-reading > h1:before {
+  background-color: #87e5f2;
+}
+
+.requirements > h1:before {
+  background-color: #93B5DA;
+}
+
+.discussion > h1:before {
+  background-color: #92F59A;
+}
+
+.hints > h1:before {
+  background-color: #86DFD4;
+}
+
+.tools_and_references > h1:before {
+  background-color: #C8A9E0;
+}
+
+.console > pre {
+  border: 4px solid #dde;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+}
+
+.fuzzy-result {
+  margin: 20px;
+}
+
+.fuzzy-result > pre {
+  margin-bottom: 0px;
+}
+
+.fuzzy-result .fuzzy-hint {
+  font-size: 12px;
+  text-align: right;
+}
+
+.fuzzy-result .fuzzy-lightened {
+  color: #aaa;
+}
+
+.in_file > pre {
+  border: 4px solid #dde;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: gray;
+  color: white;
+}
+
+.result > pre {
+  border: 4px solid #dde;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* tickyboxes */
+input.big_checkbox[type=checkbox] {
+  display: none;
+}
+input.big_checkbox[type=checkbox] + label {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    padding: 2px;
+    margin: 0 12px -8px 0;
+    background-color: white;
+    z-index: 2;
+    border: 2px solid #dadada;
+}
+input.big_checkbox[type=checkbox] + label:hover {
+    background-image: url('../img/check-dim.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+input.big_checkbox[type=checkbox]:checked + label {
+    background-image: url('../img/check.png');
+    background-size: cover;
+}

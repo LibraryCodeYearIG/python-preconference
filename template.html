@@ -1,200 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Curriculum - Python at ALA</title>
-  <script src="/jquery-1.7.2.min.js"></script><script src="/js/doc_page.js"></script>
-  <style>  @import url(/font/opensans.css);</style>
-  <style>  @import url(/css/coderay.css);</style>
-  <style>  @import url(/css/doc_page.css);</style>
-  <style>    @import url(/css/step.css);</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Curriculum - Python at ALA</title>
+    
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="js/doc_page.js"></script>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/coderay.css" />
+    <link type="text/css" rel="stylesheet" href="css/doc_page.css" />
+    <link type="text/css" rel="stylesheet" href="css/step.css" />
 </head>
 
 <body>
-<div class="top">
-<div class="top_links">
-<a class="top_link show-when-small" data-toggle-selector="#table_of_contents" href="#">toc</a><a class="top_link" data-toggle-selector="#site_index" href="#">sites</a><a class="top_link" href="curriculum/src">src</a><a class="top_link" href="https://github.com/railsbridge/docs/blob/master/sites/curriculum/curriculum.step">git</a>
-</div>
-<h1><a href="/curriculum">Python Curriculum</a></h1>
-</div>
-<div class="toc page-list" id="table_of_contents">
-<ul>
-<li><span class="current">Curriculum</span></li>
-<li><a href="/curriculum/ruby_language">Ruby Language</a></li>
-<li><a href="/curriculum/getting_started">Getting Started</a></li>
-<li><a href="/curriculum/create_a_new_git_repo">Create A New Git Repo</a></li>
-<li><a href="/curriculum/add_the_project_to_the_git_repo">Add The Project To The Git Repo</a></li>
-<li><a href="/curriculum/running_your_application_locally">Running Your Application Locally</a></li>
-<li><a href="/curriculum/creating_a_migration">Creating A Migration</a></li>
-<li><a href="/curriculum/CRUD_with_scaffolding">Crud With Scaffolding</a></li>
-<li><a href="/curriculum/voting_on_topics">Voting On Topics</a></li>
-<li><a href="/curriculum/hooking_up_votes_and_topics">Hooking Up Votes And Topics</a></li>
-<li><a href="/curriculum/allow_people_to_vote">Allow People To Vote</a></li>
-<li><a href="/curriculum/setting_the_default_page">Setting The Default Page</a></li>
-<li><a href="/curriculum/redirect_to_the_topics_list_after_creating_a_new_topic">Redirect To The Topics List After Creating A New Topic</a></li>
-<li><a href="/curriculum/make_the_topic_title_a_link">Make The Topic Title A Link</a></li>
-<li><a href="/curriculum/clean_up_links_on_the_topics_list">Clean Up Links On The Topics List</a></li>
-<li><a href="/curriculum/credits_and_next_steps">Credits And Next Steps</a></li>
-</ul>
-<h1>Other Pages</h1>
-<ul><li><a href="/curriculum/deploying_to_heroku">Deploying To Heroku</a></li></ul>
-</div>
-<div class="toc site-list" id="site_index">
-<h1>Site List</h1>
-<ul>
-<li class="current">curriculum</li>
-<li><a href="/docs/">docs</a></li>
-<li><a href="/frontend/">frontend</a></li>
-<li><a href="/installfest/">installfest</a></li>
-<li><a href="/intermediate-rails/">intermediate-rails</a></li>
-<li><a href="/ruby/">ruby</a></li>
-<li><a href="/workshop/">workshop</a></li>
-</ul>
-</div>
-<div class="main">
-<h1 class="doc_title">Curriculum</h1>
-<div class="doc">
-<div class="message">
-<h3>Goal</h3>
-
-<p>To teach you Ruby on Rails we are going to use a "Real World"
-example. You've decided to create a voting system for you and your
-friends to play with. You've decided at a minimum, you'd like to
-allow users to:</p>
-
-<ul>
-<li>view the topics sorted by number of votes</li>
-<li>vote on topics</li>
-<li>create, edit, and destroy topics</li>
-</ul>
-<p>You've sketched up an initial screenshot of what you want it to look like:</p>
-
-<p><img src="img/finished_app.png" alt="screenshot"></p>
-
-<h3>Meta-Goal</h3>
-
-<p>When you have completed today's goal of getting the basic
-application online you should understand:</p>
-
-<ul>
-<li>Basic Ruby syntax</li>
-<li>How to try your Ruby code (irb)</li>
-<li>How to go from requirements to a new working Rails application</li>
-<li>How to get your application online</li>
-<li>The basic tools a RoR developer uses (source control, editor, console, local server)</li>
-</ul>
-<h3>Schedule</h3>
-
-<ul>
-<li>1-ish hour of ruby</li>
-<li>4-ish hours of rails, broken up in 1-ish hour steps</li>
-</ul>
-<p>This is just a rough guideline, not a mandate. Some steps you'll go
-over and some you'll go under. It'll all work out by the end of the
-day... unless I really screwed something up. :D</p>
-
-<h3>Requirements</h3>
-
-<p>We're going to be working with:</p>
-
-<ul>
-<li>ruby 1.9.3 installed via rvm (mac or linux) or railsinstaller (windows)</li>
-<li>rails 3.2.x</li>
-<li>bundler</li>
-<li>sqlite</li>
-<li>the text editor of your choice</li>
-</ul>
-<p>Everything should be set up the night before during our
-install-fest. Please ensure you have everything working <em>before</em> you
-show up for railsbridge on Saturday.</p>
-
-<p>You can verify that you have everything working by trying this out in your terminal:</p>
-
-<div class="console">
-<pre>
-$ irb
-&gt;&gt; 1 + 2
-=&gt; 3
-&gt;&gt; require "active_support"
-=&gt; true
-&gt;&gt; exit
-$
-</pre>
-</div>
-
-<p>If you can do that, you are probably good to go.</p>
-
-<h3>Working Effectively and Efficiently</h3>
-
-<p>I highly recommend you do the following:</p>
-
-<ul>
-<li>Bring up your terminal and open 2 tabs:
-
-<ul>
-<li>One is for regular terminal stuffs</li>
-<li>One will be for irb (aka rails console). We'll explain later</li>
-</ul>
-</li>
-<li>Open your browser fresh or hide any windows you already have open.
-
-<ul>
-<li>Bring up one window with two tabs</li>
-<li>One for this content</li>
-<li>One for interacting with your app.</li>
-</ul>
-</li>
-<li>Open your text editor and <em>do not ever close it</em>. We're not quitters.</li>
-<li>Hide all extra applications. Turn off twitter, IM, and all other distractions.</li>
-</ul>
-<p>By minimizing the number of things you interact with, you reduce the
-amount of time spent switching between them and the context lost as
-you work through the lessons. Having 50 tabs open in your web
-browser gets confusing and wastes time.</p>
-
-<h3>Format</h3>
-
-<p>Each lesson will look like this:</p>
-
-<div style="background: white; border: 1px solid black; padding-left: 4em;">
-  <h1 class="doc_title" style="margin-top: 0em;">Step Title</h1>
-  <div class="goals">
-    <h1>Goal:</h1>
-    <p>Description of the current step.
-    </p>
-<p>Red because big goals are scary.
-  </p>
-</div>
-  <div class="steps">
-    <h1>Steps:</h1>
-    <pre class="term">steps to take.</pre>
-    <div class="console">
-      <pre>
-def code_to_write
-  1 + 1
-end</pre>
+    <div class="top">
+        <div class="top_links">
+            <a class="top_link show-when-small" data-toggle-selector="#table_of_contents" href="#">contents</a>
+            <a class="top_link" href="http://connect.ala.org/node/167971">interest group</a>
+            <a class="top_link" href="https://github.com/LibraryCodeYearIG/python-preconference">git</a>
+        </div>
+        <h1><a href="/">Python at ALA</a></h1>
     </div>
-    <p>Yellow because we've gotten it done, but we have no clue what's going on.
-  </p>
-</div>
-  <div class="explanation">
-    <h1>Explanation</h1>
-    <p>Details of what the steps actually did... spell out the cause and effect.
-    </p>
-<p>Green because we can tie everything together now.
-  </p>
-</div>
-</div>
-</div>
-<div class="step next_step">
-<h1><span class="prefix">Next Step:</span></h1>
-<p class="link">Go on to <a class="link" href="ruby_language?back=curriculum%23step">Ruby Language</a></p>
-</div>
-</div>
-</div>
-<div class="bottom cf">
-<p>Railsbridge Docs</p>
-<p>Source: <a href="https://github.com/railsbridge/docs">https://github.com/railsbridge/docs</a></p>
-</div>
+    <div class="toc page-list" id="table_of_contents">
+        <h1>Setup</h1>        
+        <ul>
+            <li><a href="/set_up">Set up Python</a></li>
+            <li><a href="/text_editor">Prepare a Text Editor</a></li>
+            <li><a href="/start_and_exit">Practice starting and exiting Python</a></li>
+            <li><a href="/command_prompt">Practice navigating the computer from a command prompt</a></li>
+            <li><a href="/running_code">Practice running Python code from a file</a></li>
+            <li><a href="/dependencies">Get dependencies installed for the Saturday projects</a></li>
+            <li><a href="/tutorial">Start learning Python!</a></li>
+            <li><a href="/codingbat">Practice Python using CodingBat</a></li>
+            <li><a href="/checkoff">Checkoff</a></li>
+        </ul>
+
+        <h1>Main preconference material</h1>        
+        <ul>
+            <li><a href="/lecture">Lecture outline and links</a></li>
+            <li><a href="/lecture">Lightning talks</a></li>
+            <li><a href="/lecture">Wordplay project</a></li>
+            <li><a href="/lecture">ColorWall project</a></li>
+        </ul>
+
+        <h1>What To Do Next</h1>        
+        <ul>
+            <li><a href="/curriculum/credits_and_next_steps">Credits And Next Steps</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1 class="doc_title">[[ SECTION TITLE GOES HERE ]]</h1>
+        
+        <div class="goals">
+            <h1>Goals</h1>
+            <ul>
+                <li>[[ ONE GOAL ]]</li>
+                <li>[[ ANOTHER ]]</li>
+                <li>[[ ET CETERA ]]</li>
+            </ul>
+        </div>
+        
+        <div class="steps">
+            <h1>Steps</h1>
+            <!-- repeat as needed; change "step1" and "Step 1" accordingly -->
+            <blockquote>
+                <a name="step1"></a>
+                <div class="step">
+                    <h1>
+                        <input class="big_checkbox" id="[[ MAKE THIS UNIQUE ]]" type="checkbox" value="valuable">
+                        <label for="[[ SAME AS INPUT ID ]]"></label>
+                        <span class="prefix">Step 1</span>
+                    </h1>
+                    <blockquote>
+                        <div class="message">
+                            <p>
+                                [[ ENTER YOUR INSTRUCTIONS HERE ]]
+                            </p>
+                        </div>
+                        <div class="console">
+                            <span></span>
+                            <pre>[[ USE FOR CODE SAMPLES ]]</pre>
+                        </div>
+                    </blockquote>
+                </div>
+            </blockquote>
+        </div>
+        
+        <div class="step next_step">
+            <h1><span class="prefix">Next Step:</span></h1>
+            <p class="link">
+                Go on to <a class="link" href="[[ NEXT PAGE IN SEQUENCE ]]">[[ TITLE OF NEXT PAGE ]]</a>
+            </p>
+        </div>
+        
+        <div class="back">
+            Back to <a class="back" href="[[ PREVIOUS PAGE IN SEQUENCE ]]">[[ TITLE OF PREVIOUS PAGE ]]</a>
+        </div>
+    </div>
 </body>
 </html>
