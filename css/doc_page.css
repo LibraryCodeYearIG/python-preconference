@@ -271,3 +271,27 @@ img {
     page-break-inside: avoid;
   }
 }
+
+.doc {
+    width: 80%;
+}
+
+div.stickynote {
+    width: 18%;
+    position: absolute;
+    right: 0;
+    background-color: #ffc;
+    /* Firefox */  
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);  
+    /* Safari+Chrome */  
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+    /* Opera */  
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    padding: 5px;
+    font-size: 85%;
+    line-height: 135%;
+}
+
+span.stickynote {
+    background-color: #ffc;
+}
