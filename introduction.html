@@ -1,592 +1,533 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Curriculum - Python at ALA</title>
-    
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src="js/doc_page.js"></script>
-    
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
-    <link type="text/css" rel="stylesheet" href="css/coderay.css" />
-    <link type="text/css" rel="stylesheet" href="css/doc_page.css" />
-    <link type="text/css" rel="stylesheet" href="css/step.css" />
-</head>
+---
+layout: default
+title: Self-paced introduction, part 1
+next_path: introduction2.html
+next_title: Self-paced introduction, part 2
+previous_path: checkoff.html
+previous_title: Checkoff
+---
+<h1 class="doc_title">Self-paced introduction</h1>
 
-<body>
-    <div class="top">
-        <div class="top_links">
-            <a class="top_link show-when-small" data-toggle-selector="#table_of_contents" href="#">contents</a>
-            <a class="top_link" href="https://github.com/LibraryCodeYearIG/python-preconference">github</a>
-            <a class="top_link" href="http://connect.ala.org/node/167971">interest group</a>
-        </div>
-        <h1><a href="/">Python at ALA</a></h1>
-    </div>
-    <div class="toc page-list" id="table_of_contents">
-        <h1>Before the preconference</h1>        
+<div class="doc">        
+    <div class="goals">
+        <h1>Goals</h1>
         <ul>
-            <li><a href="./before.html#step1">Set up Python</a></li>
-            <li><a href="./before.html#step2">Set up a text editor</a></li>
-            <li><a href="./before.html#step3">Practice starting &amp; exiting Python</a></li>
-            <li><a href="./before.html#step4">Practice navigating your files from the command prompt</a></li>
-            <li><a href="./before.html#step5">Practice running Python code from a file</a></li>
-            <li><a href="./before.html#step6">Get dependencies installed for projects</a></li>
-            <li><a href="./before.html#step7"><I>Optional</I>: Get started learning Python!</a></li>
-            <li><a href="./checkoff.html">Checkoff</a></li>
-        </ul>
-
-        <h1>Preconference</h1>        
-        <ul>
-            <li><a href="./introduction.html">Self-paced introduction, part 1</a></li>
-            <li><a href="./introduction2.html">Self-paced introduction, part 2</a></li>
-            <li><a href="/friday.html">Lecture outline and links</a></li>
-            <li><a href="/friday.html">Lightning talks</a></li>
-            <li><a href="/friday.html">Wordplay project</a></li>
-            <li><a href="/friday.html">ColorWall project</a></li>
-        </ul>
-
-        <h1>What To Do Next</h1>        
-        <ul>
-            <li><a href="/curriculum/credits_and_next_steps">Credits And Next Steps</a></li>
+            <li>Get to know the Python shell</li>
+            <li>Meet some useful Python data types</li>
+            <li>Practice using variables</li>
+            <li>Learn why tracebacks are useful</li>
         </ul>
     </div>
-    <div class="main">
-        <h1 class="doc_title">Self-paced introduction</h1>
-
-        <div class="doc">        
-            <div class="goals">
-                <h1>Goals</h1>
-                <ul>
-                    <li>Get to know the Python shell</li>
-                    <li>Meet some useful Python data types</li>
-                    <li>Practice using variables</li>
-                    <li>Learn why tracebacks are useful</li>
-                </ul>
-            </div>
-            
-            <div class="steps">
-                <h1>Steps</h1>
+    
+    <div class="steps">
+        <h1>Steps</h1>
+        <blockquote>
+            <a name="step1"></a>
+            <div class="step">
                 <blockquote>
-                    <a name="step1"></a>
-                    <div class="step">
-                        <blockquote>
-                            <div class="message">
-                                <p>
-                                    Welcome to the preconference!
-                                </p>
-                                <p>
-                                    This two-part tutorial covers several core programming concepts that we'll build upon during an interactive lecture starting at 10.  There's a break in the middle, and exercises at the middle and end to help review the material.  If you finish early, there's more advanced things to work on; if you aren't done at 10, we'll have time to catch up later.  Please go at your own pace, and feel free to ask your instructors or classmates if you have any questions.
-                                </p>
-                                <p>
-                                    This is an interactive tutorial! As you go through this tutorial, any time you see something that looks like this:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>a = "Hello"</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    you should type the expression at a Python prompt, hitting Return after every line and noting the output.
-                                </p>
-                                <p>
-                                    No copying and pasting! You'll learn the concepts better if you type them out yourself.
-                                </p>
-                            </div>
-                        </blockquote>
+                    <div class="message">
+                        <p>
+                            Welcome to the preconference!
+                        </p>
+                        <p>
+                            This two-part tutorial covers several core programming concepts that we'll build upon during an interactive lecture starting at 10.  There's a break in the middle, and exercises at the middle and end to help review the material.  If you finish early, there's more advanced things to work on; if you aren't done at 10, we'll have time to catch up later.  Please go at your own pace, and feel free to ask your instructors or classmates if you have any questions.
+                        </p>
+                        <p>
+                            This is an interactive tutorial! As you go through this tutorial, any time you see something that looks like this:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>a = "Hello"</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            you should type the expression at a Python prompt, hitting Return after every line and noting the output.
+                        </p>
+                        <p>
+                            No copying and pasting! You'll learn the concepts better if you type them out yourself.
+                        </p>
                     </div>
                 </blockquote>
+            </div>
+        </blockquote>
+        <blockquote>
+            <a name="step1"></a>
+            <div class="step">
+                <h1>
+                    <input class="big_checkbox" id="input_step1" type="checkbox" value="valuable">
+                    <label for="input_step1"></label>
+                    <span class="prefix">Strings</span>
+                </h1>
                 <blockquote>
-                    <a name="step1"></a>
-                    <div class="step">
-                        <h1>
-                            <input class="big_checkbox" id="input_step1" type="checkbox" value="valuable">
-                            <label for="input_step1"></label>
-                            <span class="prefix">Strings</span>
-                        </h1>
-                        <blockquote>
-                            <div class="message">
-                                <p>
-                                    A <span class="stickynote">string</span> is just what Python calls a bunch of characters (like numbers, letters, whitespace, and punctuation) put together. Strings are indicated by being surrounded by quotes:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>"Hello, world"</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    Try it now! Open your Python shell and type your own name in (don't forget the quotes):
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>"Alice"</pre>
-                            </div>
-                            <div class="message">
-                                You can smoosh strings together (called <span class="stickynote">concatenation</span>) using the '+' sign:
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>"Alice" + "Walker"</pre>
-                            </div>
-                            <div class="message">
-                                <p>Hm, we could have done that better...</p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>"Alice " + "Walker"</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    There.  FYI, we've been using double quotes around our strings, but you can use either double or single quotes:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>"Alice"
+                    <div class="message">
+                        <p>
+                            A <span class="stickynote">string</span> is just what Python calls a bunch of characters (like numbers, letters, whitespace, and punctuation) put together. Strings are indicated by being surrounded by quotes:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>"Hello, world"</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Try it now! Open your Python shell and type your own name in (don't forget the quotes):
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>"Alice"</pre>
+                    </div>
+                    <div class="message">
+                        You can smoosh strings together (called <span class="stickynote">concatenation</span>) using the '+' sign:
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>"Alice" + "Walker"</pre>
+                    </div>
+                    <div class="message">
+                        <p>Hm, we could have done that better...</p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>"Alice " + "Walker"</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            There.  FYI, we've been using double quotes around our strings, but you can use either double or single quotes:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>"Alice"
 'Alice'</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    Use whichever quotes make the most sense for you, but be consistent.
-                                </p>
-                                <p>
-                                    What if we try this?
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>'Alice's restaurant'</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    Hey now! The output from the previous example was really different and interesting; can you see where the problem was?  Let's break down exactly what happened:
-                                </p>
-                                <p>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Use whichever quotes make the most sense for you, but be consistent.
+                        </p>
+                        <p>
+                            What if we try this?
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>'Alice's restaurant'</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Hey now! The output from the previous example was really different and interesting; can you see where the problem was?  Let's break down exactly what happened:
+                        </p>
+                        <p>
 <pre>
 >>> 'Alice's restaurant'
-  File "<stdin>", line 1
-    'Alice's restaurant'
-                 ^
+File "<stdin>", line 1
+'Alice's restaurant'
+         ^
 SyntaxError: invalid syntax
 </pre>
-                                
-                                </p>
-                                <p>
-                                    This is giving us some useful feedback, a <code>SyntaxError</code>.  When Python looks at that expression, it sees the string 'I' and then
-                                </p>
-                                <p>
-                                    m a happy camper'
-                                </p>
-                                <p>
-                                    which it doesn't understand -- it's not 'valid' Python. Those letters don't mean anything to Python (outside of a string), and that trailing quote isn't balanced. So it raises a <code>SyntaxError</code>.
-                                </p>
-                                <p>
-                                    We can use double quotes to avoid this problem:
-                                </p>
-                            <div class="console">
-                                <span></span>
-                                <pre>"Alice's restaurant"</pre>
-                            </div>
-                            </div>
-                        </blockquote>
+                        
+                        </p>
+                        <p>
+                            This is giving us some useful feedback, a <code>SyntaxError</code>.  When Python looks at that expression, it sees the string 'I' and then
+                        </p>
+                        <p>
+                            m a happy camper'
+                        </p>
+                        <p>
+                            which it doesn't understand -- it's not 'valid' Python. Those letters don't mean anything to Python (outside of a string), and that trailing quote isn't balanced. So it raises a <code>SyntaxError</code>.
+                        </p>
+                        <p>
+                            We can use double quotes to avoid this problem:
+                        </p>
+                    <div class="console">
+                        <span></span>
+                        <pre>"Alice's restaurant"</pre>
+                    </div>
                     </div>
                 </blockquote>
+            </div>
+        </blockquote>
+        <blockquote>
+            <a name="step2"></a>
+            <div class="step">
+                <h1>
+                    <input class="big_checkbox" id="input_step2" type="checkbox" value="valuable">
+                    <label for="input_step2"></label>
+                    <span class="prefix">Command history</span>
+                </h1>
                 <blockquote>
-                    <a name="step2"></a>
-                    <div class="step">
-                        <h1>
-                            <input class="big_checkbox" id="input_step2" type="checkbox" value="valuable">
-                            <label for="input_step2"></label>
-                            <span class="prefix">Command history</span>
-                        </h1>
-                        <blockquote>
-                            <div class="message">
-                                <p>
-                                    Stop here and try hitting the Up arrow on your keyboard a few times. The Python interpreter saves a history of what you've entered, so you can arrow up to old commands and hit Return to re-run them!
-                                </p>
-                            </div>
-                        </blockquote>
+                    <div class="message">
+                        <p>
+                            Stop here and try hitting the Up arrow on your keyboard a few times. The Python interpreter saves a history of what you've entered, so you can arrow up to old commands and hit Return to re-run them!
+                        </p>
                     </div>
                 </blockquote>
+            </div>
+        </blockquote>
+        <blockquote>
+            <a name="step3"></a>
+            <div class="step">
+                <h1>
+                    <input class="big_checkbox" id="input_step3" type="checkbox" value="valuable">
+                    <label for="input_step3"></label>
+                    <span class="prefix">Variables</span>
+                </h1>
                 <blockquote>
-                    <a name="step3"></a>
-                    <div class="step">
-                        <h1>
-                            <input class="big_checkbox" id="input_step3" type="checkbox" value="valuable">
-                            <label for="input_step3"></label>
-                            <span class="prefix">Variables</span>
-                        </h1>
-                        <blockquote>
-                            <div class="message">
-                                <p>
-                                    What if you type in your name without the quotes?
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>Alice</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    This looks kind of like the last error we got, but instead of a <code>SyntaxError</code>, it's a <code>NameError</code>.  Python thinks <code>Alice</code> is the name of a <span class="stickynote">variable</span>, but it's confused because we haven't defined any variables named Alice yet.
-                                </p>
-                                <p>
-                                    A lot of work gets done in Python using variables.  You can stick all kinds of pieces of information inside of them, and store that information for later use.
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    <div class="message">
+                        <p>
+                            What if you type in your name without the quotes?
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>Alice</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            This looks kind of like the last error we got, but instead of a <code>SyntaxError</code>, it's a <code>NameError</code>.  Python thinks <code>Alice</code> is the name of a <span class="stickynote">variable</span>, but it's confused because we haven't defined any variables named Alice yet.
+                        </p>
+                        <p>
+                            A lot of work gets done in Python using variables.  You can stick all kinds of pieces of information inside of them, and store that information for later use.
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>name = "Alice"
 print name
 </pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    Giving a name to your piece of information, so that you can refer to it by that name, is called <span class="stickynote">assignment</span>. Above, we assigned the name <code>name</code> to the information <code>"Alice"</code>, and after that we can use <code>name</code> wherever we want to use the string <code>"Alice"</code>.
-                                </p>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    Variables can't have spaces or other special characters, and they need to start with a letter. Here are some valid variable names:
-                                </p>
-                                <p>
-                                    <code>my_name</code><br />
-                                    <code>magic_word</code><br />
-                                    <code>numberOfCats</code><br />
-                                </p>
-                                <p>
-                                    Projects develop naming conventions: maybe multi-word variable names use underscores (like <code>magic_word</code>), or "camel case" (like <code>numberOfCats</code>). The most important thing is to be consistent within a project, because it makes the code more readable.
-                                </p>
-                            </div>
-                        </blockquote>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Giving a name to your piece of information, so that you can refer to it by that name, is called <span class="stickynote">assignment</span>. Above, we assigned the name <code>name</code> to the information <code>"Alice"</code>, and after that we can use <code>name</code> wherever we want to use the string <code>"Alice"</code>.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Variables can't have spaces or other special characters, and they need to start with a letter. Here are some valid variable names:
+                        </p>
+                        <p>
+                            <code>my_name</code><br />
+                            <code>magic_word</code><br />
+                            <code>numberOfCats</code><br />
+                        </p>
+                        <p>
+                            Projects develop naming conventions: maybe multi-word variable names use underscores (like <code>magic_word</code>), or "camel case" (like <code>numberOfCats</code>). The most important thing is to be consistent within a project, because it makes the code more readable.
+                        </p>
                     </div>
                 </blockquote>
+            </div>
+        </blockquote>
+        <blockquote>
+            <a name="step4"></a>
+            <div class="step">
+                <h1>
+                    <input class="big_checkbox" id="input_step4" type="checkbox" value="valuable">
+                    <label for="input_step4"></label>
+                    <span class="prefix">Output</span>
+                </h1>
                 <blockquote>
-                    <a name="step4"></a>
-                    <div class="step">
-                        <h1>
-                            <input class="big_checkbox" id="input_step4" type="checkbox" value="valuable">
-                            <label for="input_step4"></label>
-                            <span class="prefix">Output</span>
-                        </h1>
-                        <blockquote>
-                            <div class="message">
-                                <p>
-                                    Notice how if you type a string and hit enter, the Python interpreter spits your string back out:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>"Alice"</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    But if you assign your name (as a string) to a variable, nothing is printed:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>name = "Alice"</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    You can think of it as that something needs to get the output. Without an assignment, the winner is the screen. With assignment, the output goes to the variable.
-                                </p>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    You can reassign variables if you want:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    <div class="message">
+                        <p>
+                            Notice how if you type a string and hit enter, the Python interpreter spits your string back out:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>"Alice"</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            But if you assign your name (as a string) to a variable, nothing is printed:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>name = "Alice"</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            You can think of it as that something needs to get the output. Without an assignment, the winner is the screen. With assignment, the output goes to the variable.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p>
+                            You can reassign variables if you want:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>name = "Alice"
 name
 name = "Bob"
 name</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    Sometimes reassigning a variable is an accident and causes bugs in programs.
-                                </p>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    Note that the spacing doesn't matter:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>name = "Alice"</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    and
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>name="Alice"</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    are both valid Python and mean the same thing.  You should strive to be consistent with whatever spacing you like (or is required by a job or standard for an open source project), since it makes reading the code easier.
-                                </p>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    You aren't cheating and skipping typing these exercises out, are you? Good! :)
-                                </p>
-                            </div>
-                        </blockquote>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Sometimes reassigning a variable is an accident and causes bugs in programs.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Note that the spacing doesn't matter:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>name = "Alice"</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            and
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>name="Alice"</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            are both valid Python and mean the same thing.  You should strive to be consistent with whatever spacing you like (or is required by a job or standard for an open source project), since it makes reading the code easier.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p>
+                            You aren't cheating and skipping typing these exercises out, are you? Good! :)
+                        </p>
                     </div>
                 </blockquote>
+            </div>
+        </blockquote>
+        <blockquote>
+            <a name="step5"></a>
+            <div class="step">
+                <h1>
+                    <input class="big_checkbox" id="input_step5" type="checkbox" value="valuable">
+                    <label for="input_step5"></label>
+                    <span class="prefix">The return of strings</span>
+                </h1>
                 <blockquote>
-                    <a name="step5"></a>
-                    <div class="step">
-                        <h1>
-                            <input class="big_checkbox" id="input_step5" type="checkbox" value="valuable">
-                            <label for="input_step5"></label>
-                            <span class="prefix">The return of strings</span>
-                        </h1>
-                        <blockquote>
-                            <div class="message">
-                                <p>
-                                    As you probably guessed earlier, you can print strings using <code>print</code>:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    <div class="message">
+                        <p>
+                            As you probably guessed earlier, you can print strings using <code>print</code>:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>h = "Hello"
 w = "World"
 print h + w</pre>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>my_string = "Alpha " + "Beta " + "Gamma " + "Delta"
 print my_string</pre>
-                            </div>
-                            <div class="message">
-                                <div class="stickynote">
-                                    We haven't defined the term <b>function</b> yet, but we promise we will.
-                                </div>
-                                <p>
-                                    There's another useful <span class="stickynote">function</span> that works on strings called len. len returns the length of a string:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    </div>
+                    <div class="message">
+                        <div class="stickynote">
+                            We haven't defined the term <b>function</b> yet, but we promise we will.
+                        </div>
+                        <p>
+                            There's another useful <span class="stickynote">function</span> that works on strings called len. len returns the length of a string:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>len("Alice")
 len("")
 len(my_string)</pre>
-                                <div class="stickynote">
-                                    Note that we can do <code>len(my_string)</code> because you assigned a value to the variable <code>my_string</code> earlier.  If you used a variable name you hadn't assigned a value to yet, like <code>len(foo)</code>, what would happen?
-                                </div>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    What if we try this?
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>name + len(name)</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    Whoa, hey! That's new.  Let's break it down.
-                                </p>
+                        <div class="stickynote">
+                            Note that we can do <code>len(my_string)</code> because you assigned a value to the variable <code>my_string</code> earlier.  If you used a variable name you hadn't assigned a value to yet, like <code>len(foo)</code>, what would happen?
+                        </div>
+                    </div>
+                    <div class="message">
+                        <p>
+                            What if we try this?
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>name + len(name)</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Whoa, hey! That's new.  Let's break it down.
+                        </p>
 <pre>>>> name + len(name)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
+File "<stdin>", line 1, in <module>
 TypeError: cannot concatenate 'str' and 'int' objects</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    Python is giving us a <span class="stickynote">traceback</span>. A traceback is details on what was happening when Python encountered an Exception or Error -- something it doesn't know how to handle.  Reading tracebacks can help us find where and why bugs happen.
-                                </p>
-                                <p>
-                                    Python gives us a helpful error message: <code>"cannot concatenate 'str' and 'int' objects"</code>.  But what does it mean by <code>'str'</code> and <code>'int'</code>?  And what's this about a <code>TypeError</code>?
-                                </p>
-                            </div>
-                        </blockquote>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Python is giving us a <span class="stickynote">traceback</span>. A traceback is details on what was happening when Python encountered an Exception or Error -- something it doesn't know how to handle.  Reading tracebacks can help us find where and why bugs happen.
+                        </p>
+                        <p>
+                            Python gives us a helpful error message: <code>"cannot concatenate 'str' and 'int' objects"</code>.  But what does it mean by <code>'str'</code> and <code>'int'</code>?  And what's this about a <code>TypeError</code>?
+                        </p>
                     </div>
                 </blockquote>
+            </div>
+        </blockquote>
+        <blockquote>
+            <a name="step6"></a>
+            <div class="step">
+                <h1>
+                    <input class="big_checkbox" id="input_step6" type="checkbox" value="valuable">
+                    <label for="input_step6"></label>
+                    <span class="prefix">Types</span>
+                </h1>
                 <blockquote>
-                    <a name="step6"></a>
-                    <div class="step">
-                        <h1>
-                            <input class="big_checkbox" id="input_step6" type="checkbox" value="valuable">
-                            <label for="input_step6"></label>
-                            <span class="prefix">Types</span>
-                        </h1>
-                        <blockquote>
-                            <div class="message">
-                                <p>
-                                    A <span class="stickynote">data type</span> is the kind of thing Python thinks something is.  So far we've seen two data types: <b>strings</b> and <b>integers</b> (the <code>'int'</code> in that last traceback).  Strings, as we've seen, are bunches of alphanumeric characters run together.  Integers are just like in math class -- numbers like 1, 2, 0, or -1 that don't contain fractions.
-                                </p>
-                                <p>
-                                    <div class="stickynote">
-                                        If you have experience with other programming languages, you may find that Python is much more casual about type declarations than you're used to.  The TAs will be happy to chat about that if you're curious.
-                                    </div>
-                                    Python cares what type a thing is because it affects what you can do with that thing.  It makes sense to ask what the length of a string is, but it doesn't make sense to ask what the length of an integer is:
-                                </p>
+                    <div class="message">
+                        <p>
+                            A <span class="stickynote">data type</span> is the kind of thing Python thinks something is.  So far we've seen two data types: <b>strings</b> and <b>integers</b> (the <code>'int'</code> in that last traceback).  Strings, as we've seen, are bunches of alphanumeric characters run together.  Integers are just like in math class -- numbers like 1, 2, 0, or -1 that don't contain fractions.
+                        </p>
+                        <p>
+                            <div class="stickynote">
+                                If you have experience with other programming languages, you may find that Python is much more casual about type declarations than you're used to.  The TAs will be happy to chat about that if you're curious.
                             </div>
-                            <div class="console">
-                                <span></span>
+                            Python cares what type a thing is because it affects what you can do with that thing.  It makes sense to ask what the length of a string is, but it doesn't make sense to ask what the length of an integer is:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>len(name)
 len("1")
 len(1)</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    That is, strings have a len() function, but integers don't.
-                                </p>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    We haven't really defined the term <span class="stickynote">function</span> yet.  We'll talk about functions more in a bit, and write our own, but for now know these things:
-                                </p>
-                                <ul>
-                                    <li>Functions encapsulate some useful bit of work. We save that useful bit of work inside the function so we don't have to type it over and over again every time we want to use it. So, for example, some nice person decided that being able to determine the length of a string was useful, so he or she put the Python code that figures out an string's length into the function type, and now we all get to use it, instead of having to write it ourselves.</li>
-                                    <li>You provide input to a function and it produces output. The length function takes a string as an input, and returns an integer telling you how long the string is as output.</li>
-                                    <li>To use a function, write the name of the function followed by an open parenthesis, what the function takes as input (we call that input the <span class="stickynote">arguments</span> to the function), and then a close parenthesis.</li>
-                                </ul>
-                                <p>
-                                    One function you may find useful, now that you know about data types, is <code>type()</code>.  It takes an object as an argument, and returns that object's type.
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    </div>
+                    <div class="message">
+                        <p>
+                            That is, strings have a len() function, but integers don't.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p>
+                            We haven't really defined the term <span class="stickynote">function</span> yet.  We'll talk about functions more in a bit, and write our own, but for now know these things:
+                        </p>
+                        <ul>
+                            <li>Functions encapsulate some useful bit of work. We save that useful bit of work inside the function so we don't have to type it over and over again every time we want to use it. So, for example, some nice person decided that being able to determine the length of a string was useful, so he or she put the Python code that figures out an string's length into the function type, and now we all get to use it, instead of having to write it ourselves.</li>
+                            <li>You provide input to a function and it produces output. The length function takes a string as an input, and returns an integer telling you how long the string is as output.</li>
+                            <li>To use a function, write the name of the function followed by an open parenthesis, what the function takes as input (we call that input the <span class="stickynote">arguments</span> to the function), and then a close parenthesis.</li>
+                        </ul>
+                        <p>
+                            One function you may find useful, now that you know about data types, is <code>type()</code>.  It takes an object as an argument, and returns that object's type.
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>type(name)
 type("1")
 type(1)</pre>
-                            </div>
-                        </blockquote>
                     </div>
                 </blockquote>
+            </div>
+        </blockquote>
+        <blockquote>
+            <a name="step7"></a>
+            <div class="step">
+                <h1>
+                    <input class="big_checkbox" id="input_step7" type="checkbox" value="valuable">
+                    <label for="input_step7"></label>
+                    <span class="prefix">Arithmetic</span>
+                </h1>
                 <blockquote>
-                    <a name="step7"></a>
-                    <div class="step">
-                        <h1>
-                            <input class="big_checkbox" id="input_step7" type="checkbox" value="valuable">
-                            <label for="input_step7"></label>
-                            <span class="prefix">Arithmetic</span>
-                        </h1>
-                        <blockquote>
-                            <div class="message">
-                                <p>
-                                    Math in Python looks a lot like math you type into a calculator. A Python prompt makes a great calculator if you need to crunch some numbers and don't have a good calculator handy.
-                                </p>
-                                <p>
-                                    You can add...
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    <div class="message">
+                        <p>
+                            Math in Python looks a lot like math you type into a calculator. A Python prompt makes a great calculator if you need to crunch some numbers and don't have a good calculator handy.
+                        </p>
+                        <p>
+                            You can add...
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>2 + 2
 1.5 + 2.25</pre>
-                            </div>
-                            <div class="message">
-                                <p>...subtract...</p>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    </div>
+                    <div class="message">
+                        <p>...subtract...</p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>4 - 2
 100 - 0.5
 0 - 2</pre>
-                            </div>
-                            <div class="message">
-                                <p>...multiply...</p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>2 * 3</pre>
-                            </div>
-                            <div class="message">
-                                <p>...and divide.</p>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    </div>
+                    <div class="message">
+                        <p>...multiply...</p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>2 * 3</pre>
+                    </div>
+                    <div class="message">
+                        <p>...and divide.</p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>4 / 2
 1 / 2</pre>
-                            </div>
-                            <div class="message">
-                                <div class="stickynote">
-                                    By the way, this isn't true any more in Python 3.0 &mdash; division is smart enough to switch to floats automatically.  While Python 3.0 is available, most people are still using a 2.x version, so that's what we're doing.  If you find yourself working on a Python 3.x project, though, you'll want to read up on <a href="http://docs.python.org/dev/whatsnew/index.html">the changes between versions</a>.
-                                </div>
-                                <p>
-                                    Hey now! That last result is probably not what you expected. What's going on here is that integer divison produces an integer. You need a number that knows about the decimal point to get a decimal out of division:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>1.0 / 2</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    This type of number is called a <span class="stickynote">float</p>.
-                                </p>
-                                <p>
-                                    This means you have to be careful when manipulating fractions. If you were making some pie and needed to add 3/4 of a cup of flour and 1/4 of a cup of flour, you know in your heads that 3/4 + 1/4 = 1 cup. But try that at the Python prompt:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
-                                <pre>3/4 + 1/4</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    What do you need to do to get the right answer? Use data types that understand decimals for each of the divisions:
-                                </p>
-                            </div>
-                            <div class="console">
-                                <span></span>
+                    </div>
+                    <div class="message">
+                        <div class="stickynote">
+                            By the way, this isn't true any more in Python 3.0 &mdash; division is smart enough to switch to floats automatically.  While Python 3.0 is available, most people are still using a 2.x version, so that's what we're doing.  If you find yourself working on a Python 3.x project, though, you'll want to read up on <a href="http://docs.python.org/dev/whatsnew/index.html">the changes between versions</a>.
+                        </div>
+                        <p>
+                            Hey now! That last result is probably not what you expected. What's going on here is that integer divison produces an integer. You need a number that knows about the decimal point to get a decimal out of division:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>1.0 / 2</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            This type of number is called a <span class="stickynote">float</p>.
+                        </p>
+                        <p>
+                            This means you have to be careful when manipulating fractions. If you were making some pie and needed to add 3/4 of a cup of flour and 1/4 of a cup of flour, you know in your heads that 3/4 + 1/4 = 1 cup. But try that at the Python prompt:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>3/4 + 1/4</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            What do you need to do to get the right answer? Use data types that understand decimals for each of the divisions:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
 <pre>3.0/4 + 1.0/4
 3.0/4.0 + 1.0/4.0</pre>
-                            </div>
-                            <div class="message">
-                                <p>
-                                    The two previous expressions produce the same result. You only need to make one of the numbers in each fraction have a decimal. When the Python interpreter goes to do the division, it notices that one of the numbers in the fraction cares about decimals and says "that means I have to make the other number care about decimals too".
-                                </p>
-                            </div>
-                        </blockquote>
+                    </div>
+                    <div class="message">
+                        <p>
+                            The two previous expressions produce the same result. You only need to make one of the numbers in each fraction have a decimal. When the Python interpreter goes to do the division, it notices that one of the numbers in the fraction cares about decimals and says "that means I have to make the other number care about decimals too".
+                        </p>
                     </div>
                 </blockquote>
+            </div>
+        </blockquote>
+        <blockquote>
+            <a name="step8"></a>
+            <div class="step">
+                <h1>
+                    <input class="big_checkbox" id="input_step8" type="checkbox" value="valuable">
+                    <label for="input_step8"></label>
+                    <span class="prefix">End of part 1</span>
+                </h1>
                 <blockquote>
-                    <a name="step8"></a>
-                    <div class="step">
-                        <h1>
-                            <input class="big_checkbox" id="input_step8" type="checkbox" value="valuable">
-                            <label for="input_step8"></label>
-                            <span class="prefix">End of part 1</span>
-                        </h1>
-                        <blockquote>
-                            <div class="message">
-                                <p>
-                                    Congratulations! You've learned about and practiced math, strings, variables, data types, exceptions, tracebacks, and executing Python from the Python prompt.
-                                </p>
-                                <p>
-                                    Take a break, stretch, meet some neighbors, and ask the staff if you have any questions about this material.
-                                </p>
-                            </div>
-                        </blockquote>
+                    <div class="message">
+                        <p>
+                            Congratulations! You've learned about and practiced math, strings, variables, data types, exceptions, tracebacks, and executing Python from the Python prompt.
+                        </p>
+                        <p>
+                            Take a break, stretch, meet some neighbors, and ask the staff if you have any questions about this material.
+                        </p>
                     </div>
                 </blockquote>
             </div>
-            
-            <div class="step next_step">
-                <h1><span class="prefix">Next Step:</span></h1>
-                <p class="link">
-                    Go on to <a class="link" href="./introduction2.html">Self-paced introduction, part 2</a>
-                </p>
-            </div>
-        </div>
-        <div class="back">
-            Back to <a class="back" href="./checkoff.html">Checkoff</a>
-        </div>
+        </blockquote>
     </div>
-</body>
-</html>
