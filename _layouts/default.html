@@ -55,13 +55,14 @@ title: Python at ALA
         </ul>
     </div>
     <div class="main">
+        <h1 class="doc_title">{{ page.title }}</h1>
         {{ content }}
         
             {% if page.next_path %}
             <div class="step next_step">
                 <h1><span class="prefix">Next Step:</span></h1>
                 <p class="link">
-                    <a class="link" href="{{ page.next_path }}">{{ page.next_title }}</a>
+                    On to <a class="link" href="{{ page.next_path }}">{{ page.next_title }}</a>
                 </p>
             </div>
             {% endif %}
