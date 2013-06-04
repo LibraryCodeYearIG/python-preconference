@@ -37,7 +37,7 @@ previous_title: Self-paced introduction, part 1
                                 Download the file <a href="http://mit.edu/jesstess/www/BostonPythonWorkshop7/nobel.py">http://mit.edu/jesstess/www/BostonPythonWorkshop7/nobel.py</a> by right-clicking on it and saying to save it as a ".py" file to your Desktop. The ".py" extension hints that this is a Python script.
                             </li>
                             <li>
-                                Open a command prompt, and use the navigation commands (dir and cd on Windows, ls, pwd, and cd on OS X and Linux) to navigate to your home directory. See <a href="before.html#step4">navigating from a command prompt</a> for a refresher on those commands.
+                                Open a command prompt, and use the navigation commands (dir and cd on Windows, ls, pwd, and cd on OS X and Linux) to navigate to your home directory. See <a href="before.html#step4">practice navigating your files from a command prompt</a> for a refresher on those commands.
                             </li>
                             <li>
                                 Once you are in your home directory, execute the contents of nobel.py by typing
@@ -54,7 +54,7 @@ previous_title: Self-paced introduction, part 1
                         </p>
                         <ul start="4">
                             <li>
-                                Open nobel.py in your text editor (see <a href="before.html#step2">preparing your text editor</a> for a refresher on starting the editor).
+                                Open nobel.py in your text editor (see the instructions on<a href="before.html#step2">setting up your text editor</a> for a refresher on starting the editor).
                             </li>
                             <li>
                                 Read through the file in your text editor carefully and check your understanding of both the comments and the code.
@@ -135,7 +135,7 @@ previous_title: Self-paced introduction, part 1
                         <pre>"a" != "A"</pre>
                     </div>
                     <div class="message">
-                        <p>&lt;, &lte;, &gt;, and &gte; have the same meanings you're familiar with from school. The result of these tests is a boolean:</p>
+                        <p><, <=, >, and >= have the same meanings you're familiar with from school. The result of these tests is a boolean:</p>
                     </div>
                     <div class="console">
                         <span></span>
@@ -161,7 +161,7 @@ previous_title: Self-paced introduction, part 1
                         </p>
                     </div>
                     <div class="stickynote">
-                        Programmer joke here.  <a href="http://www.perl.org/">Perl</a> is a programming language that was hugely popular in the 1990s, and there's still a ton of perl code being written, including in libraries.  It's very different stylistically from Python, though. As many people who've programmed in more than one language have strong favorites (and unfavorites), some Pythonistas might be known to diss Perl. We here take no position on the merits of different languages.  Except that Python is awesome.
+                        Programmer joke here.  <a href="http://www.perl.org/">Perl</a> is a programming language that was hugely popular in the 1990s, and there's still a ton of perl code being written, including in libraryland.  It's very different stylistically from Python, though. As many people who've programmed in more than one language have strong favorites (and unfavorites), some Pythonistas might be known to diss Perl. We here take no position on the merits of different languages.  Except that Python is awesome.
                     </div>
                     <div class="console">
                         <span></span>
@@ -180,63 +180,156 @@ previous_title: Self-paced introduction, part 1
                     <span class="prefix">Flow control</span>
                 </h1>
                 <blockquote>
-                    <h2>if statements</h2>
+                    <h2><code>if</code> statements</h2>
                     <div class="message">
                         <p>
-                            Stop here and try hitting the Up arrow on your keyboard a few times. The Python interpreter saves a history of what you've entered, so you can arrow up to old commands and hit Return to re-run them!
-                        </p>
-                    </div>
-                </blockquote>
-            </div>
-        </blockquote>
-        <blockquote>
-            <a name="step3"></a>
-            <div class="step">
-                <h1>
-                    <input class="big_checkbox" id="input_step3" type="checkbox" value="valuable">
-                    <label for="input_step3"></label>
-                    <span class="prefix">Variables</span>
-                </h1>
-                <blockquote>
-                    <div class="message">
-                        <p>
-                            What if you type in your name without the quotes?
+                            We can use these expressions that <i>evaluate</i> to booleans to make decisions and conditionally execute code.  (As always, decide what you think will happen before running the code!)
                         </p>
                     </div>
                     <div class="console">
                         <span></span>
-                        <pre>Alice</pre>
+                        <pre>if 6 > 5:
+     print "Six is greater than five!"</pre>
                     </div>
                     <div class="message">
                         <p>
-                            This looks kind of like the last error we got, but instead of a <code>SyntaxError</code>, it's a <code>NameError</code>.  Python thinks <code>Alice</code> is the name of a <span class="stickynote">variable</span>, but it's confused because we haven't defined any variables named Alice yet.
+                            That was our first multi-line piece of code, and the way to enter it at a Python prompt is a little different. First, type the <code>if 6 > 5:</code> part, and press Enter. The next line will have <code>...</code> as a prompt, instead of the usual >>>. This is Python telling us that we are in the middle of a <span class="stickynote">code block</span>, and so long as we indent our code it should be a part of this code block.
                         </p>
                         <p>
-                            A lot of work gets done in Python using variables.  You can stick all kinds of pieces of information inside of them, and store that information for later use.
+                            Enter 4 spaces, and then type <code>print "Six is greater than five!"</code>  Press Enter to end the line, and press Enter again to tell Python you are done with this code block. All together, it will look like this:
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>>>> if 6 > 5:
+...      print "Six is greater than five!"
+... 
+Six is greater than five!</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            What is going on here? When Python encounters the if keyword, it evaluates the expression following the keyword and before the colon. If that expression is <b>True</b>, Python executes the code in the indented code block under the if line. If that expression is <b>False</b>, Python skips over the code block.
+                        </p>
+                        <p>
+                            In this case, because 6 really is greater than 5, Python executes the code block under the if statement, and we see "Six is greater than five!" printed to the screen. Guess what will happen with these other expressions, then type them out and see if your guess was correct:
                         </p>
                     </div>
                     <div class="console">
                         <span></span>
-<pre>name = "Alice"
-print name
+                        <pre>if 0 > 2:
+     print "Zero is greater than two!"
+</pre>
+<pre>
+if "banana" in "bananarama":
+    print "I miss the 80s."
+</pre>
+                    </div>
+                    <h2>More choices: <code>if</code> and <code>else</code></h2>
+                    <div class="message">
+                        <p>
+                            You can use the <code>else</code> keyword to execute code when the <code>if</code> expression isn't True. Try this:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>sister_age = 15
+brother_age = 12
+if sister_age > brother_age:
+    print "sister is older"
+else:
+    print "brother is older"
 </pre>
                     </div>
                     <div class="message">
                         <p>
-                            Giving a name to your piece of information, so that you can refer to it by that name, is called <span class="stickynote">assignment</span>. Above, we assigned the name <code>name</code> to the information <code>"Alice"</code>, and after that we can use <code>name</code> wherever we want to use the string <code>"Alice"</code>.
+                            Like with <code>if</code>, the code block under the <code>else</code> statement must be indented so Python knows that it is a part of the else block.
                         </p>
+                    </div>
+                    <h2>compound conditionals: <code>and</code> and <code>or</code></h2>
+                    <div class="message">
+                        <p>
+                            As you know again from your mad ninja OPAC skills, you can check multiple expressions together using the <code>and</code> and <code>or</code> keywords. If two expressions are joined by an <code>and</code>, they <b>both</b> have to be True for the overall expression to be True. If two expressions are joined by an <code>or</code>, as long as <b>at least one</b> is True, the overall expression is True.
+                        </p>
+                        <p>
+                            Try typing these out and see what you get:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>1 > 0 and 1 < 2</pre>
+                        <pre>1 < 2 and "x" in "abc"</pre>
+                        <pre>"a" in "hello" or "e" in "hello"</pre>
+                        <pre>1 <= 0 or "a" not in "abc"</pre>
                     </div>
                     <div class="message">
                         <p>
-                            Variables can't have spaces or other special characters, and they need to start with a letter. Here are some valid variable names:
+                            Guess what will happen when you enter these next two examples, and then type them out and see if you are correct. If you have trouble with the indenting, call over a staff member and practice together. It is important to be comfortable with indenting for the lecture and afternoon projects.
+                        </p>
+                    </div>
+                    <div class="console">
+                        <span></span>
+                        <pre>temperature = 32
+if temperature > 60 and temperature < 75:
+    print "It's nice and cozy in here!"
+else:
+    print "Too extreme for me."</pre>
+                        <pre>hour = 11
+if hour < 7 or hour > 23:
+    print "Go away!"
+    print "I'm sleeping!"
+else:
+    print "Welcome to the yarn shop!"
+    print "Can I interest you in some nice merino?"</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            You can have as many lines of code as you want in <code>if</code> and <code>else</code> blocks; just make sure to indent them so Python knows they are a part of the block.
+                        </p>
+                    </div>
+                    <h2>even more choices: <code>elif</code></h2>
+                    <div class="message">
+                        <p>
+                            If you have more than two cases, you can use the <code>elif</code> keyword to check more cases. You can have as many <code>elif</code> cases as you want; Python will go down the code checking each <code>elif</code> until it finds a True condition or reaches the default <code>else</code> block.
+                        </p>
+                    </div>
+                    <div class="console">
+                        <pre>temperature = 32
+if temperature > 60 and temperature < 75:
+    print "It's nice and cozy in here!"
+elif temperature > 75:
+    print "Too extreme for me."
+else:
+    print "Brrr! Fetch me my cardigan."</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            You don't have to have an <code>else</code> block, if you don't need it. That just means there isn't default code to execute when none of the <code>if</code> or <code>elif</code> conditions are True:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <pre>color = "orange"
+if color == "green" or color == "red":
+    print "Christmas color!"
+elif color == "black" or color == "orange":
+    print "Halloween color!"
+elif color == "pink":
+    print "Valentine's Day color!"</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            If color had been "purple", that code wouldn't have printed anything.
                         </p>
                         <p>
-                            <code>my_name</code><br />
-                            <code>magic_word</code><br />
-                            <code>numberOfCats</code><br />
+                            <b>Remember that '=' is for assignment and '==' is for comparison.</b>
                         </p>
+                    </div>
+                    <h2>In summary: the structure of <code>if</code>/<code>elif</code>/<code>else</code></h2>
+                    <div class="message">
                         <p>
-                            Projects develop naming conventions: maybe multi-word variable names use underscores (like <code>magic_word</code>), or "camel case" (like <code>numberOfCats</code>). The most important thing is to be consistent within a project, because it makes the code more readable.
+                            Here's a summary of <code>if</code>/<code>elif</code>/<code>else</code>:
+                        </p>
+                        <img src="https://openhatch.org/w/images/0/03/If-elif-else.png">
+                        <p>
+                            Do you understand the difference between <code>elif</code> and <code>else</code>? When do you indent? When do you use a colon? If you're not sure, talk about it with a neighbor or staff member.
                         </p>
                     </div>
                 </blockquote>
@@ -248,75 +341,184 @@ print name
                 <h1>
                     <input class="big_checkbox" id="input_step4" type="checkbox" value="valuable">
                     <label for="input_step4"></label>
-                    <span class="prefix">Output</span>
+                    <span class="prefix">Writing functions</span>
                 </h1>
                 <blockquote>
                     <div class="message">
                         <p>
-                            Notice how if you type a string and hit enter, the Python interpreter spits your string back out:
+                            We talked a bit about functions when we introduced the <code>len()</code> and <code>type()</code> functions. Let's review what we know about functions:
+                        </p>
+                        <ul>
+                            <li>They do some useful bit of work.</li>
+                            <li>They let us re-use code without having to type it out each time.</li>
+                            <li>They take input and possibly produce output (we say they <span class="stickynote">return</span> a value). You can assign a variable to this output.</li>
+                            <li>You call a function by using its name followed by its <span class="stickynote">arguments</span> in parentheses.</li>
+                        </ul>
+                        <p>
+                            For example:
                         </p>
                     </div>
                     <div class="console">
                         <span></span>
-                        <pre>"Alice"</pre>
+                        <pre>length = len("Mississippi")</pre>
                     </div>
                     <div class="message">
                         <p>
-                            But if you assign your name (as a string) to a variable, nothing is printed:
+                            Executing this code assigns the length of the string "Mississippi" to the variable <code>length</code>.
+                        </p>
+                        <p>
+                            We can write our own functions to encapsulate bits of useful work so we can reuse them. Here's how you do it:
+                        </p>
+                    </div>
+                    <h2>Step 1: Write a function signature</h2>
+                    <div class="message">
+                        <p>
+                            A <span class="stickynote">function signature</span> tells you how the function will be called. It starts with the keyword def, which tells Python that you are defining a function. Then comes a space, the name of your function, an open parenthesis, the comma-separated input arguments for your function, a close parenthesis, and a colon. Here's what a function signature looks like for a function that takes no arguments:
+                        </p>
+                        <p>
+                            <code>def myFunction():</code>
+                        </p>
+                        <p>
+                            Here's what a function signature looks like for a function that takes one argument called <code>string</code>:
+                        </p>
+                        <p>
+                            <code>def myFunction(string):</code>
+                        </p>
+                        <p>
+                            And one for a function that takes two arguments:
+                        </p>
+                        <p>
+                            <code>def myFunction(myList, myInteger):</code>
+                        </p>
+                        <p>
+                            Arguments should have names that usefully describe what they are used for in the function.  Functions should (unlike <code>myFunction()</code>) have descriptive names, too.
+                        </p>
+                    </div>
+                    <h2>Step 2: do useful work inside the function</h2>
+                    <div class="message">
+                        <p>
+                            Underneath the function signature you do your useful work. Everything inside the function is indented, just like with if/else blocks, so Python knows that it is a part of the function.
+                        </p>
+                        <p>
+                            You can use the variables passed into the function as arguments, just like you can use variables once you define them outside of functions.
                         </p>
                     </div>
                     <div class="console">
-                        <span></span>
-                        <pre>name = "Alice"</pre>
+                        <pre>def add(x, y):
+    result = x + y</pre>
                     </div>
+                    <h2>Step 3: return something</h2>
                     <div class="message">
                         <p>
-                            You can think of it as that something needs to get the output. Without an assignment, the winner is the screen. With assignment, the output goes to the variable.
-                        </p>
-                    </div>
-                    <div class="message">
-                        <p>
-                            You can reassign variables if you want:
+                            If you want to be able to assign the output of a function to a variable so you can use it later, the function has to <b>return that output</b> using the return keyword.
                         </p>
                     </div>
                     <div class="console">
-                        <span></span>
-<pre>name = "Alice"
-name
-name = "Bob"
-name</pre>
+                        <pre>def add(x, y):
+    result = x + y
+    return result</pre>
                     </div>
                     <div class="message">
                         <p>
-                            Sometimes reassigning a variable is an accident and causes bugs in programs.
-                        </p>
-                    </div>
-                    <div class="message">
-                        <p>
-                            Note that the spacing doesn't matter:
+                            or, even shorter:
                         </p>
                     </div>
                     <div class="console">
-                        <span></span>
-                        <pre>name = "Alice"</pre>
+                        <pre>def add(x, y):
+    return x + y</pre>
                     </div>
                     <div class="message">
                         <p>
-                            and
+                            You can return any Python object: numbers, strings, booleans ... even other functions!
+                        </p>
+                        <p>
+                            Once you execute a return, you are done with the function -- you don't get to do any more work. That means if you have a function like this...
                         </p>
                     </div>
                     <div class="console">
-                        <span></span>
-                        <pre>name="Alice"</pre>
+                        <pre>def absoluteValue(number):
+    if number < 0:
+        return number * -1
+    return number</pre>
                     </div>
                     <div class="message">
                         <p>
-                            are both valid Python and mean the same thing.  You should strive to be consistent with whatever spacing you like (or is required by a job or standard for an open source project), since it makes reading the code easier.
+                            ...if <code>number</code> is less than 0, you return number * -1 and never even get to the last line of the function. However, if <code>number</code> is greater than or equal to 0, the <code>if</code> expression evaluates to <code>False</code>, so we skip the code in the <code>if</code> block and return <code>number</code>.
+                        </p>
+                        <p>
+                            We could have written the above function like this if we wanted. It's the same logic, just more typing:
                         </p>
                     </div>
+                    <div class="console">
+                        <pre>def absoluteValue(number):
+    if number < 0:
+        return number * -1
+    else:
+        return number</pre>
+                    </div>
                     <div class="message">
                         <p>
-                            You aren't cheating and skipping typing these exercises out, are you? Good! :)
+                            There's usually more than one right way to write a program (that is, it runs and does the thing it's supposed to do).  Sometimes one of them may be better (e.g. it runs faster or is easier to read and modify), but some differences are purely a matter of personal style.  As we write more complicated programs later today, you might enjoy comparing notes with your neighbors and seeing the different ways you've attacked the same problem.
+                        </p>
+                    </div>
+                    <h2>Step 4: use the function</h2>
+                    <div class="message">
+                        <p>
+                            Once you define a function you can use it as many times as you want:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <pre>def add(x, y):
+    return x + y
+
+result = add(1234, 5678)
+print result
+result = add(-1.5, .5)
+print result</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Functions don't have to return anything, if you don't want them to. They usually return something because we usually want to be able to assign variables to their output.
+                        </p>
+                    </div>
+                    <h2>What is the difference between print and return?</h2>
+                    <div class="message">
+                        <p>
+                            Think for a moment about the differences between <code>print</code> and <code>return</code>:
+                        </p>
+                        <ul>
+                            <li><code>print</code> prints output to the screen so your eyes can see it.</li>
+                            <li><code>return</code> is used to hand off a value from inside a function to a variable outside the function.</li>
+                        </ul>
+                        <p>
+                            For example:
+                        </p>
+                    </div>                    
+                    <div class="console">
+                        <pre>def add(x, y):
+    print x + y</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            will print <code>x + y</code> to the screen so your eyes can see it.
+                        </p>
+                    </div>
+                    <div class="console">
+                        <pre>def add(x, y):
+    return x + y</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            will hand off <code>x + y</code> from inside the function to outside the function. This allows you to do something like:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <pre>result = add(5, 6)
+print result</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Does that make sense? If not, talk about it with a neighbor or staff member.
                         </p>
                     </div>
                 </blockquote>
@@ -328,225 +530,14 @@ name</pre>
                 <h1>
                     <input class="big_checkbox" id="input_step5" type="checkbox" value="valuable">
                     <label for="input_step5"></label>
-                    <span class="prefix">The return of strings</span>
+                    <span class="prefix">End of part 2</span>
                 </h1>
                 <blockquote>
                     <div class="message">
                         <p>
-                            As you probably guessed earlier, you can print strings using <code>print</code>:
+                            Congratulations! You've learned about and practiced executing Python scripts, booleans, conditionals, and if/else blocks, and you've written your own Python functions. This is a huge, huge accomplishment!
                         </p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-<pre>h = "Hello"
-w = "World"
-print h + w</pre>
-                    </div>
-                    <div class="console">
-                        <span></span>
-<pre>my_string = "Alpha " + "Beta " + "Gamma " + "Delta"
-print my_string</pre>
-                    </div>
-                    <div class="message">
-                        <div class="stickynote">
-                            We haven't defined the term <b>function</b> yet, but we promise we will.
-                        </div>
-                        <p>
-                            There's another useful <span class="stickynote">function</span> that works on strings called len. len returns the length of a string:
-                        </p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-<pre>len("Alice")
-len("")
-len(my_string)</pre>
-                        <div class="stickynote">
-                            Note that we can do <code>len(my_string)</code> because you assigned a value to the variable <code>my_string</code> earlier.  If you used a variable name you hadn't assigned a value to yet, like <code>len(foo)</code>, what would happen?
-                        </div>
-                    </div>
-                    <div class="message">
-                        <p>
-                            What if we try this?
-                        </p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-                        <pre>name + len(name)</pre>
-                    </div>
-                    <div class="message">
-                        <p>
-                            Whoa, hey! That's new.  Let's break it down.
-                        </p>
-<pre>>>> name + len(name)
-Traceback (most recent call last):
-File "<stdin>", line 1, in <module>
-TypeError: cannot concatenate 'str' and 'int' objects</pre>
-                    </div>
-                    <div class="message">
-                        <p>
-                            Python is giving us a <span class="stickynote">traceback</span>. A traceback is details on what was happening when Python encountered an Exception or Error -- something it doesn't know how to handle.  Reading tracebacks can help us find where and why bugs happen.
-                        </p>
-                        <p>
-                            Python gives us a helpful error message: <code>"cannot concatenate 'str' and 'int' objects"</code>.  But what does it mean by <code>'str'</code> and <code>'int'</code>?  And what's this about a <code>TypeError</code>?
-                        </p>
-                    </div>
-                </blockquote>
-            </div>
-        </blockquote>
-        <blockquote>
-            <a name="step6"></a>
-            <div class="step">
-                <h1>
-                    <input class="big_checkbox" id="input_step6" type="checkbox" value="valuable">
-                    <label for="input_step6"></label>
-                    <span class="prefix">Types</span>
-                </h1>
-                <blockquote>
-                    <div class="message">
-                        <p>
-                            A <span class="stickynote">data type</span> is the kind of thing Python thinks something is.  So far we've seen two data types: <b>strings</b> and <b>integers</b> (the <code>'int'</code> in that last traceback).  Strings, as we've seen, are bunches of alphanumeric characters run together.  Integers are just like in math class -- numbers like 1, 2, 0, or -1 that don't contain fractions.
-                        </p>
-                        <p>
-                            <div class="stickynote">
-                                If you have experience with other programming languages, you may find that Python is much more casual about type declarations than you're used to.  The TAs will be happy to chat about that if you're curious.
-                            </div>
-                            Python cares what type a thing is because it affects what you can do with that thing.  It makes sense to ask what the length of a string is, but it doesn't make sense to ask what the length of an integer is:
-                        </p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-<pre>len(name)
-len("1")
-len(1)</pre>
-                    </div>
-                    <div class="message">
-                        <p>
-                            That is, strings have a len() function, but integers don't.
-                        </p>
-                    </div>
-                    <div class="message">
-                        <p>
-                            We haven't really defined the term <span class="stickynote">function</span> yet.  We'll talk about functions more in a bit, and write our own, but for now know these things:
-                        </p>
-                        <ul>
-                            <li>Functions encapsulate some useful bit of work. We save that useful bit of work inside the function so we don't have to type it over and over again every time we want to use it. So, for example, some nice person decided that being able to determine the length of a string was useful, so he or she put the Python code that figures out an string's length into the function type, and now we all get to use it, instead of having to write it ourselves.</li>
-                            <li>You provide input to a function and it produces output. The length function takes a string as an input, and returns an integer telling you how long the string is as output.</li>
-                            <li>To use a function, write the name of the function followed by an open parenthesis, what the function takes as input (we call that input the <span class="stickynote">arguments</span> to the function), and then a close parenthesis.</li>
-                        </ul>
-                        <p>
-                            One function you may find useful, now that you know about data types, is <code>type()</code>.  It takes an object as an argument, and returns that object's type.
-                        </p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-<pre>type(name)
-type("1")
-type(1)</pre>
-                    </div>
-                </blockquote>
-            </div>
-        </blockquote>
-        <blockquote>
-            <a name="step7"></a>
-            <div class="step">
-                <h1>
-                    <input class="big_checkbox" id="input_step7" type="checkbox" value="valuable">
-                    <label for="input_step7"></label>
-                    <span class="prefix">Arithmetic</span>
-                </h1>
-                <blockquote>
-                    <div class="message">
-                        <p>
-                            Math in Python looks a lot like math you type into a calculator. A Python prompt makes a great calculator if you need to crunch some numbers and don't have a good calculator handy.
-                        </p>
-                        <p>
-                            You can add...
-                        </p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-<pre>2 + 2
-1.5 + 2.25</pre>
-                    </div>
-                    <div class="message">
-                        <p>...subtract...</p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-<pre>4 - 2
-100 - 0.5
-0 - 2</pre>
-                    </div>
-                    <div class="message">
-                        <p>...multiply...</p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-                        <pre>2 * 3</pre>
-                    </div>
-                    <div class="message">
-                        <p>...and divide.</p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-<pre>4 / 2
-1 / 2</pre>
-                    </div>
-                    <div class="message">
-                        <div class="stickynote">
-                            By the way, this isn't true any more in Python 3.0 &mdash; division is smart enough to switch to floats automatically.  While Python 3.0 is available, most people are still using a 2.x version, so that's what we're doing.  If you find yourself working on a Python 3.x project, though, you'll want to read up on <a href="http://docs.python.org/dev/whatsnew/index.html">the changes between versions</a>.
-                        </div>
-                        <p>
-                            Hey now! That last result is probably not what you expected. What's going on here is that integer divison produces an integer. You need a number that knows about the decimal point to get a decimal out of division:
-                        </p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-                        <pre>1.0 / 2</pre>
-                    </div>
-                    <div class="message">
-                        <p>
-                            This type of number is called a <span class="stickynote">float</p>.
-                        </p>
-                        <p>
-                            This means you have to be careful when manipulating fractions. If you were making some pie and needed to add 3/4 of a cup of flour and 1/4 of a cup of flour, you know in your heads that 3/4 + 1/4 = 1 cup. But try that at the Python prompt:
-                        </p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-                        <pre>3/4 + 1/4</pre>
-                    </div>
-                    <div class="message">
-                        <p>
-                            What do you need to do to get the right answer? Use data types that understand decimals for each of the divisions:
-                        </p>
-                    </div>
-                    <div class="console">
-                        <span></span>
-<pre>3.0/4 + 1.0/4
-3.0/4.0 + 1.0/4.0</pre>
-                    </div>
-                    <div class="message">
-                        <p>
-                            The two previous expressions produce the same result. You only need to make one of the numbers in each fraction have a decimal. When the Python interpreter goes to do the division, it notices that one of the numbers in the fraction cares about decimals and says "that means I have to make the other number care about decimals too".
-                        </p>
-                    </div>
-                </blockquote>
-            </div>
-        </blockquote>
-        <blockquote>
-            <a name="step8"></a>
-            <div class="step">
-                <h1>
-                    <input class="big_checkbox" id="input_step8" type="checkbox" value="valuable">
-                    <label for="input_step8"></label>
-                    <span class="prefix">End of part 1</span>
-                </h1>
-                <blockquote>
-                    <div class="message">
-                        <p>
-                            Congratulations! You've learned about and practiced math, strings, variables, data types, exceptions, tracebacks, and executing Python from the Python prompt.
-                        </p>
+                        <img src="something awesome from tumblr or somewhere">
                         <p>
                             Take a break, stretch, meet some neighbors, and ask the staff if you have any questions about this material.
                         </p>

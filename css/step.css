@@ -15,9 +15,13 @@ span.prefix {
 }
 
 .step h1 span.prefix {
-  font-size: 0.9em;
+  font-size: 1.5em;
   padding-left: 0;
   padding-right: 8px;
+}
+
+h2 {
+    font-size: 1.25em;
 }
 
 img.noborder {
