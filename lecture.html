@@ -6,7 +6,7 @@ next_title: Lightning talks!
 previous_path: checkoff.html
 previous_title: Checkoff
 ---
-<div class="doc">        
+<div class="doc">
     <div class="goals">
         <h1>Goals</h1>
         <ul>
@@ -18,7 +18,7 @@ previous_title: Checkoff
             <li>Apply all these concepts to understanding a real program</li>
         </ul>
     </div>
-    
+
     <div class="steps">
         <h1>Lecture outline</h1>
         <blockquote>
@@ -85,7 +85,7 @@ previous_title: Checkoff
                             <li><code>range()</code></li>
                             <li><code>while</code> loops</li>
                             <li>infinite loops</li>
-                            <li><code>if</code> statements inside <code>while</code> loops</li>     
+                            <li><code>if</code> statements inside <code>while</code> loops</li>
                             <li><code>break</code></li>
                             <li><code>raw_input()</code></li>
                             </ul>
@@ -113,6 +113,86 @@ previous_title: Checkoff
                         </ul>
                     </div>
                 </blockquote>
+                <p>
+                    <a href="http://docs.python.org/2/tutorial/datastructures.html#dictionaries" title="Dictionaries | Python Data Structures">Dictionaries</a>, abbreviated to "dicts" in Python-speak, are a set of key-value pairs much like a linguistic dictionary contains terms and their definitions. Dicts can be useful to store structured data or make difficult-to-remember values easier to access. Let's see how you make a new dict.
+                </p>
+                <div class="console">
+<pre>
+words = {
+'python': 'an awesome programming language',
+'anaconda': 'a terrifying snake'
+}
+</pre>
+                </div>
+                <p>
+                    Like any other variable, we start by giving the dict a name and then an equals sign. Remember that a single equals <em>assigns</em> a variable's value, while multiple equals is used to <em>compare</em> a variable's value against something else. Dicts look very similar to arrays, except they use curly braces to enclose their contents rather than square brackets.
+                </p>
+                <p>
+                    Now that we've got a dict with some items in it, how do we retrieve its values?
+                </p>
+                <div class="console">
+<pre>
+>>> words[ 'python' ]
+'an awesome programming language'
+>>> words[ 'anaconda' ]
+'a terrifying snake'
+</pre>
+                </div>
+                <p>
+                    Again, there are similarities with arrays. We use bracket notation to specify which item we want to receive from the dict, but instead of using an integer like with arrays we use the key whose value we want.
+                </p>
+                <p>
+                    Adding and altering items is easy, too.
+                </p>
+                <div class="console">
+<pre>
+>>> words[ 'boa constrictor' ] = 'an even more terrifying snake'
+>>> words[ 'boa constrictor' ]
+'an even more terrifying snake'
+>>> words[ 'anaconda' ] = 'a slightly less terrifying snake'
+>>> words[ 'anaconda' ]
+'a slightly less terrifying snake'
+</pre>
+                </div>
+                <p>
+                    Dicts come with a couple handy built-in functions: <code>keys()</code> returns an array of all the dict's keys, while <code>values()</code> returns an array of its—wait for it&hellip;—values.
+                </p>
+                <div class="console">
+<pre>
+>>> words.keys()
+['python', 'boa constrictor', 'anaconda']
+>>> words.values()
+['an awesome programming language', 'an even more terrifying snake', 'a slightly less terrifying snake']
+</pre>
+                </div>
+                <p>
+                    It's worth noting that there's no guaranteed order to how the keys or values are returned. It also is handy that the <code>len()</code> function works on dicts, too; <code>len( words )</code> will return the number <code>3</code> in our example.
+                </p>
+                <h2>Ready to have your mind blown?</h2>
+                <p>
+                    While we've seen only text strings so far, the value of a dict item can be <em>any other Python data structure,</em> including another dict. Here's a much more complicated dict:
+                </p>
+                <div class="console">
+<pre>
+catalog = {
+'last_updated': 'Sat Jun 15 17:32:53 EDT 2013',
+'num_items': 213,
+'items': {
+    '9780596009250': {
+        'title': 'Programming Python',
+        'authors': [ 'Mark Lutz' ],
+        'pub_year': 2006
+        },
+    '9780596002817': {
+        'title': 'Learning Python',
+        'authors': [ 'Mark Lutz', 'David Ascher' ],
+        'pub_year': 2003
+        }
+},
+'location_codes': [ 'stacks', 'reserves', 'special collections' ]
+}
+</pre>
+                </div>
             </div>
         </blockquote>
         <blockquote>
