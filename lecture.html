@@ -31,6 +31,7 @@ previous_title: Checkoff
                 </h1>
                 <blockquote>
                     <div class="message">
+                        <h2>Section goals</h2>
                         <ul>
                             <li>math</li>
                             <li><code>type()</code></li>
@@ -54,6 +55,7 @@ previous_title: Checkoff
                 </h1>
                 <blockquote>
                     <div class="message">
+                        <h2>Section goals</h2>
                         <ul>
                             <li>purpose</li>
                             <li>initialization</li>
@@ -64,6 +66,207 @@ previous_title: Checkoff
                             <li>slicing lists</li>
                             <li>strings are like lists</li>
                         </ul>
+                    </div>
+                    <div class="message">
+                        <h3>Purpose, initialization, and <code>len()</code></h3>
+                        <p>
+                            So, do you ever make a to-do list?  Let's start one.
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>todo_list = ['initialize list', 'find its length', 'access elements']
+todo_list
+len(todo_list)
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            You can initialize lists with any starting set of items you want.  They don't have to be strings.  You could use numbers:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <pre>number_list = [3, 1, 4, 1, 5]</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Do you see why these are numbers and not strings?  How would it be different if you wanted this to be a list of strings?
+                        </p>
+                        <p>
+                            As you can see, it's okay to have the same element more than once, and you don't have to put things in order.  Whatever order you put things in, the program will remember.
+                        </p>
+                        <h3>Accessing elements</h3>
+                        <p>
+                            You probably want to access individual elements of your list sometimes.  How about the first item on your to-do list?
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>todo_list[1]
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            ...wait what?
+                        </p>
+                        <h3>Adding elements</h3>
+                        <p>
+                            You can add elements to the end of your list with the <code>append()</code> function:
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>todo_list.append('add an element')
+todo_list
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            If you have more than one list, you can add those together too:
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list_two = ['coffee break', 'learn about negative indexing']
+todo_list + todo_list_two
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Note that that <span class="stickynote">returned</span> a new list, but we didn't <span class="stickynote">assign</span> it to anything, so we're not going to be able to use it in the future.  We could say something like <code>new_todo_list = todo_list + todo_list_two</code>.  Or we might want this useful shorthand:
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list += todo_list_two
+todo_list
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            What just happened there?
+                        </p>
+                        <h3>Changing elements</h3>
+                        <div class="message">
+                            <p>
+                                Remember what the first element on our list was?
+                            </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list[0]
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            We've totally done that.  Let's assign a new value to that space on our list (which will overwrite the existing value).
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list[0] = 'change a list element'
+todo_list
+</pre>
+                    </div>
+                    <div class="message">
+                        <h3>Slicing lists</h3>
+                        <p>
+                            Our list has gotten kind of long!
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+len(todo_list)
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            What if we only want to tackle part of it?  We've seen how to access a single element (e.g. <code>todo_list[0]</code>).  If we're feeling like we can handle more than one thing on our to-do list right now, though, we can take a <span class="stickynote">slice</span>. 
+                        </p>
+                        <p>
+                            Which elements do you think this will give us?  How many>
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list[0:2]
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Was that what you expected?  If not, what's actually going on here?
+                        </p>
+                        <p>
+                            You can leave one of the slice parameters out and it still works.
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list[:2]
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            What did this one do?
+                        </p>
+                        <p>
+                            How about this?
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list[2:]
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            By the way, if you were wondering why our slice <I>does</I> include the first listed element but <I>doesn't</I> include the second, here's why. What is <code>todo_list[:2] + todo_list[2:]</code>?  That's right -- it's the whole list and just the list, without repeating <code>todo_list[2]</code>.
+                        </p>
+                        <p>
+                            Let's feel really accomplished by tackling the last item on our to-do list:
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list[-1]
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Booyah!  How cool is that?
+                        </p>
+                        <p>
+                            You can use <span class="stickynote">negative indexes</span> for slicing, too.  How about we look at everything from the third-to-last element to the end?
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list[-3:]
+</pre>
+                    </div>
+                    <div class="message">
+                        <h3>Strings are like lists</h3>
+                        <p>
+                            So check out this wacky Python trick.  Let's make a string:
+                        </p>
+                    </div>
+                    <div class="console">
+                        <div class="stickynote">
+                            Mmmm, pie.
+                        </div>
+<pre>
+string = "Pie, .py, or pi?"
+string[0]
+string[0:3]
+</pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            Strings aren't always like lists; you can't use list methods like <code>append()</code> on them.  But the indexing notation works, treating a string just like a list of characters.
+                        </p>
+                        <div class="stickynote">
+                            If you've programmed before in a statically typed language, this will probably either blow your mind with glee, or freak you out.  <a href="http://wiki.python.org/moin/Why%20is%20Python%20a%20dynamic%20language%20and%20also%20a%20strongly%20typed%20language">More details</a>.
+                        </div>
+                        <p>
+                            In general, Python tries not to be too picky about what type an object is unless it absolutely has to be; otherwise it tries to do what you'd expect.
+                        </p>
                     </div>
                 </blockquote>
             </div>
@@ -78,6 +281,7 @@ previous_title: Checkoff
                 </h1>
                 <blockquote>
                     <div class="message">
+                        <h2>Section goals</h2>
                         <ul>
                             <li><code>for</code> loops</li>
                             <li><code>if</code> statements inside <code>for</code> loops</li>
@@ -216,6 +420,7 @@ catalog = {
                 </h1>
                 <blockquote>
                     <div class="message">
+                        <h2>Section goals</h2>
                         <ul>
                             <li>purpose</li>
                             <li>builtins</li>
