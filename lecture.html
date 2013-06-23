@@ -520,11 +520,11 @@ string[0:3]
 		</div>
 
 		<div class="console">
-			<pre>
-			print pie[0]
-			print pie[1]
-			print pie [2]
-			</pre>
+<pre>
+print pie[0]
+print pie[1]
+print pie [2]
+</pre>
 		</div>
 
 		<div class="messge">
@@ -532,7 +532,7 @@ string[0:3]
 			It'll do the job, but do we really want to write the same code over and over again for each element? Do you like <span class="stickynote">RSIs</span>? I don't.
 			</p>
 			<div class="stickynote">
-			More information on RSIs at <a href"https://en.wikipedia.org/wiki/Repetitive_strain_injury">Wikipedia</a>. In short, they stink. Remember to take frequent breaks while programming!
+			More information on RSIs at <a href="https://en.wikipedia.org/wiki/Repetitive_strain_injury">Wikipedia</a>. In short, they stink. Remember to take frequent breaks while programming!
 			</div>
 			<p>
 			Enter loops. Loops allow you to work through lists efficiently by only having to write one piece of code for all (or a subset of) the elements of a list. There are different types of loops that you can use for different situations. For our example, we will use the <code>for</code> loop. 
@@ -543,10 +543,10 @@ string[0:3]
 		</div>
 
 		<div class="console">
-			<pre>
-			for fruit in pie:
-				print fruit
-			</pre>
+<pre>
+for fruit in pie:
+	print fruit
+</pre>
 		</div>
 
 		<div class="message">
@@ -556,13 +556,13 @@ string[0:3]
 		</div>
 
 		<div message="console">
-			<pre>
-			for fruit in pie:
-				if fruit = "strawberry":
-					print "I like strawberry!"
-				else:
-					print fruit
-			</pre>
+<pre>
+for fruit in pie:
+	if fruit = "strawberry":
+		print "I like strawberry!"
+	else:
+		print fruit
+</pre>
 		</div>
 		<div class="message">
 		<p>
@@ -577,8 +577,7 @@ string[0:3]
 		</div>
 
 		<div class="console">
-			<pre>
-			approved_berries = ["strawberry", "currants", "elderberry"]
+			<pre>approved_berries = ["strawberry", "currants", "elderberry"]
 			</pre>
 		</div>
 
@@ -589,14 +588,14 @@ string[0:3]
 		</div>
 
 		<div class="console">
-			<pre>
-			i = 0
-			for fruit in pie:
-				for berry in approved_berries:
-					if fruit == berry:
-						i += 1
-			print str(i) + ' approved berries in this pie'
-			</pre>
+<pre>
+i = 0
+for fruit in pie:
+	for berry in approved_berries:
+		if fruit == berry:
+			i += 1
+print str(i) + ' approved berries in this pie'
+</pre>
 		</div>
 
 		<div class="message">
@@ -610,10 +609,10 @@ string[0:3]
 		</div>
 
 		<div class="console">
-			<pre>
-			range(14)
-			range(3,14)
-			</pre>
+<pre>
+range(14)
+range(3,14)
+</pre>
 		</div>
 
 		<div class="message">
@@ -623,10 +622,10 @@ string[0:3]
 		</div>
 
 		<div class="console">
-			<pre>
-			for fruit in range(len(pie)):
-				print pie[fruit]
-			</pre>
+<pre>
+for fruit in range(len(pie)):
+	print pie[fruit]
+</pre>
 		</div>
 
 		<div class="message">
@@ -643,13 +642,13 @@ string[0:3]
 		</div>
 
 		<div class="console">
-			<pre>
-			i = 0
-			infinite = True
-			while infinite:
-				i += 1
-				print i
-			</pre>
+<pre>
+i = 0
+infinite = True
+while infinite:
+	i += 1
+	print i
+</pre>
 		</div>
 
 		<div class="message">
@@ -674,16 +673,16 @@ string[0:3]
 		</div>
 
 		<div class="console">
-			<pre>
-			i = 0
-			infinite = True
-			while infinite:
-				i += 1
-				if i == 10:
-					break
-				else:
-					print i
-			</pre>
+<pre>
+i = 0
+infinite = True
+while infinite:
+	i += 1
+	if i == 10:
+		break
+	else:
+		print i
+</pre>
 		</div>
 
 		<div class="message">
@@ -697,15 +696,15 @@ string[0:3]
 		</div>	
 
 		<div class="console">
-			<pre>
-			answer = ""
-			while answer != "yes":
-				answer = raw_input("Are you enjoying the workshop so far?")
-				if answer == "yes":
-					print "Glad to hear that!"
-				else:
-					print "You will enjoy it even if you aren't. Try again."
-			</pre>
+<pre>
+answer = ""
+while answer != "yes":
+	answer = raw_input("Are you enjoying the workshop so far?")
+	if answer == "yes":
+		print "Glad to hear that!"
+	else:
+		print "You will enjoy it even if you aren't. Try again."
+</pre>
 		</div>
                 </blockquote>
             </div>
