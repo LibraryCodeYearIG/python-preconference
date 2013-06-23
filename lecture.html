@@ -42,6 +42,204 @@ previous_title: Checkoff
                             <li>functions</li>
                         </ul>
                     </div>
+                    <div class="message">
+                        <h3>Math!</h3>
+                        <p>With Python you can do math in much the same way that you would with a calculator or in an Excel file. Simple operations such as addition, subtraction, multiplication and division can all be done at the Python prompt:</p>
+                    </div>
+                    <div class="console">
+<pre>2+2
+5-2
+3 * 4
+4 / 2
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>So, pretty easy right? As you can see from above, it doesn't even matter if you add spaces or not (though generally it is a best practice to be consistent in your use of spacing). Let's try something a little more difficult.</p>
+                    </div>
+                    <div class="console">
+<pre>
+2*2 + 10*2
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>This example is a bit more complicated, but more importantly, it shows that the order of operations in Python is the same as the order of operations that you learned in math class</p>
+                    
+                    <p>As you may have noticed, none of those numbers involved decimal places. How do you think Python will handle decimal places? Let's give it a try:</p>
+                    </div>
+                    <div class="console">
+<pre>
+1 / 2
+</pre>              
+                    </div>
+                    <div class="message">
+                    <p>Ok, so that isn't quite what we were expecting. Because that fraction involved two integers, the result is also going to be an integer. Any time you want a decimal point to be an option, you have to input at least one number with a decimal point:</p>                
+                    </div>
+                    <div class="console">
+<pre>
+1.0 / 2
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>Much better! Note that you could have also put the decimal in the denominator instead. In Python, numbers with decimals are called floats.</p>
+                    <h3><code>type()</code></h3> 
+                    <p>So that covers basic math, but it also hints at the fact that Python recognizes multiple <span class="stickynote">types</span> of data. Now we have discused two of the types that Python recognizes: <span class="stickynote">integers</span> and <span class="stickynote">floats</span>. In fact, it also recognizes other types of data was we will see shortly. But, how can we know what type of data Python thinks something is? Luckily, there is a function for that! The function is <code>type()</code>. If you use this function and put the information for which you want a type in the parentheses, the result will be the type of data:
+                    </div>
+                    <div class="console">                    
+<pre>
+type(1)
+type(1.0)
+</pre>      
+                    </div>
+                    <div class="message">
+                    <p>This can be a useful way to find out what type of data you are dealing with.</p>
+                                  
+                   <h3>Variables</h3>
+                   <p>Already you can do a few things with Python, but what if you want to move on to more complicated mathematical concepts or functions. For that you will need <span class="stickynote">variables</span> to store information, which you saw this morning in the tutorial. To use variables, you will need to first pick a name for the piece of information that you want to represent with the variable. This is called <span class="stickynote">assignment</span>. You can assign a value to a variable with an equals sign.</p>
+                    </div>
+                    <div class="console">                   
+<pre>
+x = 4
+y = 2.5
+x
+y
+</pre>
+                    </div>
+                    <div class="message">      
+                   <p>Be sure to assign a value to a variable before you use it; if you don't you'll see an error message. Tips for picking a variable:
+                   <ul>
+                   <li>Variables must start with a letter.</li>
+                   <li>Variables cannot have spaces or any special characters</li>
+                   <li>Ideally, variables should be descriptive to make your code more readable</li>
+                   </ul>
+                   </p>
+                   
+                   <h3>Strings</h3>
+                   <p>Now that we have covered how Python can let you do math, it is time to see what it can do with strings. <span class="stickynote">Strings</span> are the third data type we are learning about after integers and floats. The term string refers to any group of multiple characters. These can be letters, numbers, special characters, punctutation mark or spaces and they can be in any combination. Strings are always surrounded by quotes and anything between the quotes is considered part of the string:
+                    </div>
+                    <div class="console">
+<pre>
+"Hello"
+"Hello, world!"
+"Testing 1, 2, 3"
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>Strings can also be stored in variables.</p>
+                    </div>
+                    <div class="console">
+<pre>
+x = "Hello"
+x
+</pre>
+                    </div>
+                    <div class="message">
+                    <h3>Booleans</h3>
+                    <p><span class="stickynote">Booleans</span> are another data type. There are only two booleans: <code>True</code> and <code>False</code>. They allow us to test facts and write programs that make decisions. Be sure to pay attention to the capitalization:
+                    </div>
+                    <div class="console">                    
+<pre>
+type(True)
+type(true)
+type(False)
+type(false)
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>These booleans make it easy to test equality and inequality.
+                    </div>
+                    <div class="console">
+<pre>
+0 == 0
+0 == 1
+0 != 1
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>You'll notice a couple of things from these examples. First, notice that equality is tested with <code>==</code> as opposed to <code>=</code>. This is because <code>=</code> is used for assignment wherease <code>==</code> is used for comparison. You'll also notice that <code>!=</code> tests whether the two values are NOT equal to one another.
+                    <p>In addition to equality and inequality, you can also test for greater than or less than. <,<=, >, and >= all mean exactly what you would expect.</p>
+                    </div>
+                    <div class="console">
+<pre>
+2 > 1
+1 < 2
+2 >= 5
+</pre>
+                    </div>
+                    <div class="message">
+                    <h3><code>if</code>/<code>elif</code>/<code>else</code></h3>
+                    <p>Now that we understand booleans, we can start creating and use conditional statements:</p>
+                    </div>
+                    <div class="console">
+<pre>
+if 2 > 1:
+     print "Two is greater than one."
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>Did that behave the way you expected it to? As you can see, how that we are writing multiple lines of code, indentations become important. You will need to indent the second line 4 spaces and you have to be careful that your indentations are always consistent. As you'll see, as soon as you type the first line, Python detects that your code will have multiple lines and prompts you with <code>...</code> instead of <code>>>></code>. When you click enter at the end of the code block, Python will evaluate the conditional statement and respond accordingly.</p>
+                    
+                    <p>This allows us to evaluate conditional expressions, but it only allows us to respond to either the True or the False case. What if we want to execute code for more than one condition? To do this, we need to use <code>else</code> in addition to <code>if</code>.
+                    </div>
+                    <div class="console">
+<pre>
+x = 5
+y = 3
+if y > x:
+    print "y is greater than x."
+else:
+    print: "x is greater than y."
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>Here we have two code blocks and this is reflected in the indentation. But, what if we want to write more complicated conditional statements? We can do that by using <code>and</code> and <code>or</code>:
+                    </div>
+                    <div class="console">
+<pre>
+date = 28
+if date > 26 and date < 31:
+    print "Time for ALA Annual."
+else:
+    print "Still time to pack!"
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>You can also check more than situations. If you want to do so, you need to use <code>elif</code> (remember it as an abbreviation for else if). You can use <code>elif</code> as many times as you would like to evaluate as many conditions as you would like. Let's see an example:
+                    </div>
+                    <div class="console">
+<pre>
+date = 28
+if date > 26 and date < 31:
+    print "Time for ALA Annual."
+elif date == 28:
+    print "Time for my preconference!"
+else:
+    print "Still time to pack!"
+</pre>
+
+                    </div>
+                    <div class="message">
+                    <h3>Functions</h3>
+                    <p>We've already talked briefly about simple functions when we discussed <code>type()</code>, but with Python you can write far more complicated functions than this. As with <code>type()</code>, many functions have already been written and can be called with their name. But, what if we want to write our own functions?</p>
+                    <p>It makes sense to write functions for activities that we will want to reuse. Functions start with a function signature which defines the function and tells you how it will be called and what argument(s) it takes. The second part of a function is the part that actually does work for you. It is indented just as we did with <code>if</code>/<code>elif</code>/<code>else</code> blocks. You already saw a few of these in the tutorial this morning, but let's take a look at an example of a function:</p>
+                    </div>
+                    <div class="console">
+<pre>                  
+def multiply(x, y):
+    result = x * y
+    return result 
+<pre>
+                    </div>
+                    <div class="message">
+                    <p>Now let's try using our function:</p>
+                    </div>
+                    <div class="console">
+<pre>
+multiply(2, 3)
+</pre>                    
+                    </div>
+                    <div class="message">
+                    <p>While this is a very basic function, you can also write more complicated functions, as we will see later today.</p>
+                    </div>
                 </blockquote>
             </div>
         </blockquote>
