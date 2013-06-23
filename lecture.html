@@ -498,6 +498,220 @@ string[0:3]
                             <li><code>raw_input()</code></li>
                             </ul>
                     </div>
+					
+					<div class="message">					
+						<h3><code>for</code> real?</h3>
+
+							<p>
+								Lists are fine, lists are great, and you will be up to your ears in lists in your coding life. Here's the catch: a list can contain any number of elements, and more often than not you will have to look at each element and determine what to do with it.
+							</p>
+							<p>
+								Let's take a list:
+							</p>
+
+					</div>
+
+					<div class="console">
+						<pre>pie = ["strawberry", "blueberry", "raspberry"]</pre>
+					</div>
+
+					<div class="message">
+						<p>
+							So, how can I find out what's all in <code>pie</code>? Well, we could do this:
+						</p>
+					</div>
+
+					<div class="console">
+						<pre>
+							print pie[0]
+							print pie[1]
+							print pie [2]
+						</pre>
+					</div>
+
+					<div class="messge">
+						<p>
+							It'll do the job, but do we really want to write the same code over and over again for each element? Do you like <span class="stickynote">RSIs</span>? I don't.
+						</p>
+						<div class="stickynote">
+							More information on RSIs at <a href"https://en.wikipedia.org/wiki/Repetitive_strain_injury">Wikipedia</a>. In short, they stink. Remember to take frequent breaks while programming!
+						</div>
+						<p>
+							Enter loops. Loops allow you to work through lists efficiently by only having to write one piece of code for all (or a subset of) the elements of a list. There are different types of loops that you can use for different situations. For our example, we will use the <code>for</code> loop. 
+						</p>
+						<p>
+							And here it is! Do you know what's going on in the <code>for</code> loop below?
+						</p>
+					</div>
+
+					<div class="console">
+						<pre>
+							for fruit in pie:
+								print fruit
+						</pre>
+					</div>
+
+					<div class="message">
+						<p>
+							The example above has a simple command, but we can do much more in loops. We can introduce other forms of flow control in loops. Do y'all remember <code>if…else</code> statements? You can use them in loops if you are looking for a particular condition with one or more of the elements in a list. Here's an example. What will happen?
+						</p>
+					</div>
+
+					<div message="console">
+						<pre>
+						for fruit in pie:
+							if fruit = "strawberry":
+								print "I like strawberry!"
+							else:
+								print fruit
+						</pre>
+					</div>
+
+					<div class="message">
+
+						<p>
+							Better yet, you can put loops within loops! Loopception, if you will. 
+						</p>
+						<p>
+							A wild list appears!
+						</p>
+						<div class="stickynote">
+							<a href="http://knowyourmeme.com/memes/its-super-effective">It's super effective!</a>
+						</div>
+					</div>
+
+					<div class="console">
+						<pre>
+						approved_berries = ["strawberry", "currants", "elderberry"]
+						</pre>
+					</div>
+
+					<div class="message">
+						<p>
+							If I want to see if there are any elements in <code>approved_berries</code> in <code>pie</code>, what will it look like? Also, what"s up with that <code>i</code> there?
+						</p>
+					</div>
+
+					<div class="console">
+						<pre>
+						i = 0
+						for fruit in pie:
+							for berry in approved_berries:
+								if fruit == berry:
+									i += 1
+						print str(i) + ' approved berries in this pie'
+						</pre>
+					</div>
+
+
+					<div class="message">
+						<h3>Home on the <code>range()</code></h3>
+							<p>
+								The <code>range()</code> function will help if you need to go through a series of numbers as well as lists. You can get fancy with <code>range()</code> but we'll stick to two ways you can use the function.
+							</p>
+							<p>
+								The first is your garden variety going through a series of numbers. You can either give an end number as a single parameter, or have both a beginning number and an end number as two parameters.
+							</p>
+					</div>
+
+					<div class="console">
+						<pre>
+						range(14)
+						range(3,14)
+						</pre>
+					</div>
+
+					<div class="message">
+						<p>
+							<code>range ()</code> also works on lists. Going back to our <code>pie</code> list, what berries will be printed out below? 
+						</p>
+					</div>
+
+					<div class="console">
+						<pre>
+						for fruit in range(len(pie)):
+							print pie[fruit]
+						</pre>
+					</div>
+
+					<div class="message">
+						<p>
+							Would this way of printing the list be any different from the first for code snippit above?
+						</p>
+					</div>
+
+					<div class="message">
+						<h3><code>while</code> you"re here...</h3>
+							<p>
+								The other loop function you will find useful is <code>while</code>. It is also one of the functions that you will curse the most. Why? Run the following code. Surely nothing will go wrong if you just copy and paste a piece of code and run it, no questions asked…
+							</p>
+					</div>
+
+					<div class="console">
+						<pre>
+						i = 0
+						infinite = True
+						while infinite:
+							i += 1
+							print i
+						</pre>
+					</div>
+
+					<div class="message">
+						<p>
+							The loop has nothing in there to tell it to stop on its own. This is called an <span class="stickynote">infinite loop</span>. How do you stop this abomination of system resources?
+						</p>
+						<div class="stickynote">
+							You might have other words for it once you delve deeper into loops. Words that are not appropriate in a professional setting.
+						</div>
+						<p>
+							<strong>control + c OR control + break (OR control + backslash on Mac, if the other two don't work)</strong>
+						</p>
+						<p>
+							Remember the above keystrokes. They kill running python processes. They also know where the digital bodies are buried.
+						</p>
+						<p>
+							How do we make sure that our <code>while</code> loop ends? We either need to find a way to make that <code>infinite</code> variable <code>False</code> or we need to insert a <code>break</code> function. <code>break</code> allows the script to exit the current loop. However, if we add either of those to the <code>while</code> code above, we'd only go through the loop once. What should we do?
+						</p>
+						<p>
+							Like the <code>for</code> loop function, we can use other flow control functions under the <code>while</code> loop, such as <code>if</code> statements. When will the loop break in the below code?
+						</p>
+					</div>
+
+					<div class="console">
+						<pre>
+						i = 0
+						infinite = True
+						while infinite:
+							i += 1
+							if i == 10:
+								break
+							else:
+								print i
+						</pre>
+					</div>
+
+					<div class="message">
+						<h3>You can't handle the <code>raw_input()</code>!</h3>
+							<p>
+								Before we finish with this section of the lecture, there's one more function that you'll find useful when dealing with flow control. Sometimes you will need something from the person running the script in order for the script to then act on that information. <code>raw_input()</code> prompts the user to enter a value, which you can then store in a variable.
+							</p>
+							<p>
+								What answer does the user have to answer with to break the <code>while</code> loop?
+							</p>
+					</div>	
+
+					<div class="console">
+						<pre>
+						answer = ""
+						while answer != "yes":
+							answer = raw_input("Are you enjoying the workshop so far?")
+							if answer == "yes":
+								print "Glad to hear that!"
+							else:
+								print "You will enjoy it even if you aren't. Try again."
+						</pre>
+					</div>
                 </blockquote>
             </div>
         </blockquote>
