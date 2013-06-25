@@ -42,6 +42,204 @@ previous_title: Checkoff
                             <li>functions</li>
                         </ul>
                     </div>
+                    <div class="message">
+                        <h3>Math!</h3>
+                        <p>With Python you can do math in much the same way that you would with a calculator or in an Excel file. Simple operations such as addition, subtraction, multiplication and division can all be done at the Python prompt:</p>
+                    </div>
+                    <div class="console">
+<pre>2+2
+5-2
+3 * 4
+4 / 2
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>So, pretty easy right? As you can see from above, it doesn't even matter if you add spaces or not (though generally it is a best practice to be consistent in your use of spacing). Let's try something a little more difficult.</p>
+                    </div>
+                    <div class="console">
+<pre>
+2*2 + 10*2
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>This example is a bit more complicated, but more importantly, it shows that the order of operations in Python is the same as the order of operations that you learned in math class</p>
+
+                    <p>As you may have noticed, none of those numbers involved decimal places. How do you think Python will handle decimal places? Let's give it a try:</p>
+                    </div>
+                    <div class="console">
+<pre>
+1 / 2
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>Ok, so that isn't quite what we were expecting. Because that fraction involved two integers, the result is also going to be an integer. Any time you want a decimal point to be an option, you have to input at least one number with a decimal point:</p>
+                    </div>
+                    <div class="console">
+<pre>
+1.0 / 2
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>Much better! Note that you could have also put the decimal in the denominator instead. In Python, numbers with decimals are called floats.</p>
+                    <h3><code>type()</code></h3>
+                    <p>So that covers basic math, but it also hints at the fact that Python recognizes multiple <span class="stickynote">types</span> of data. Now we have discused two of the types that Python recognizes: <span class="stickynote">integers</span> and <span class="stickynote">floats</span>. In fact, it also recognizes other types of data was we will see shortly. But, how can we know what type of data Python thinks something is? Luckily, there is a function for that! The function is <code>type()</code>. If you use this function and put the information for which you want a type in the parentheses, the result will be the type of data:
+                    </div>
+                    <div class="console">
+<pre>
+type(1)
+type(1.0)
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>This can be a useful way to find out what type of data you are dealing with.</p>
+
+                   <h3>Variables</h3>
+                   <p>Already you can do a few things with Python, but what if you want to move on to more complicated mathematical concepts or functions. For that you will need <span class="stickynote">variables</span> to store information, which you saw this morning in the tutorial. To use variables, you will need to first pick a name for the piece of information that you want to represent with the variable. This is called <span class="stickynote">assignment</span>. You can assign a value to a variable with an equals sign.</p>
+                    </div>
+                    <div class="console">
+<pre>
+x = 4
+y = 2.5
+x
+y
+</pre>
+                    </div>
+                    <div class="message">
+                   <p>Be sure to assign a value to a variable before you use it; if you don't you'll see an error message. Tips for picking a variable:
+                   <ul>
+                   <li>Variables must start with a letter.</li>
+                   <li>Variables cannot have spaces or any special characters</li>
+                   <li>Ideally, variables should be descriptive to make your code more readable</li>
+                   </ul>
+                   </p>
+
+                   <h3>Strings</h3>
+                   <p>Now that we have covered how Python can let you do math, it is time to see what it can do with strings. <span class="stickynote">Strings</span> are the third data type we are learning about after integers and floats. The term string refers to any group of multiple characters. These can be letters, numbers, special characters, punctutation mark or spaces and they can be in any combination. Strings are always surrounded by quotes and anything between the quotes is considered part of the string:
+                    </div>
+                    <div class="console">
+<pre>
+"Hello"
+"Hello, world!"
+"Testing 1, 2, 3"
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>Strings can also be stored in variables.</p>
+                    </div>
+                    <div class="console">
+<pre>
+x = "Hello"
+x
+</pre>
+                    </div>
+                    <div class="message">
+                    <h3>Booleans</h3>
+                    <p><span class="stickynote">Booleans</span> are another data type. There are only two booleans: <code>True</code> and <code>False</code>. They allow us to test facts and write programs that make decisions. Be sure to pay attention to the capitalization:
+                    </div>
+                    <div class="console">
+<pre>
+type(True)
+type(true)
+type(False)
+type(false)
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>These booleans make it easy to test equality and inequality.
+                    </div>
+                    <div class="console">
+<pre>
+0 == 0
+0 == 1
+0 != 1
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>You'll notice a couple of things from these examples. First, notice that equality is tested with <code>==</code> as opposed to <code>=</code>. This is because <code>=</code> is used for assignment wherease <code>==</code> is used for comparison. You'll also notice that <code>!=</code> tests whether the two values are NOT equal to one another.
+                    <p>In addition to equality and inequality, you can also test for greater than or less than. <,<=, >, and >= all mean exactly what you would expect.</p>
+                    </div>
+                    <div class="console">
+<pre>
+2 > 1
+1 < 2
+2 >= 5
+</pre>
+                    </div>
+                    <div class="message">
+                    <h3><code>if</code>/<code>elif</code>/<code>else</code></h3>
+                    <p>Now that we understand booleans, we can start creating and use conditional statements:</p>
+                    </div>
+                    <div class="console">
+<pre>
+if 2 > 1:
+     print "Two is greater than one."
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>Did that behave the way you expected it to? As you can see, how that we are writing multiple lines of code, indentations become important. You will need to indent the second line 4 spaces and you have to be careful that your indentations are always consistent. As you'll see, as soon as you type the first line, Python detects that your code will have multiple lines and prompts you with <code>...</code> instead of <code>>>></code>. When you click enter at the end of the code block, Python will evaluate the conditional statement and respond accordingly.</p>
+
+                    <p>This allows us to evaluate conditional expressions, but it only allows us to respond to either the True or the False case. What if we want to execute code for more than one condition? To do this, we need to use <code>else</code> in addition to <code>if</code>.
+                    </div>
+                    <div class="console">
+<pre>
+x = 5
+y = 3
+if y > x:
+    print "y is greater than x."
+else:
+    print: "x is greater than y."
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>Here we have two code blocks and this is reflected in the indentation. But, what if we want to write more complicated conditional statements? We can do that by using <code>and</code> and <code>or</code>:
+                    </div>
+                    <div class="console">
+<pre>
+date = 28
+if date > 26 and date < 31:
+    print "Time for ALA Annual."
+else:
+    print "Still time to pack!"
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>You can also check more than situations. If you want to do so, you need to use <code>elif</code> (remember it as an abbreviation for else if). You can use <code>elif</code> as many times as you would like to evaluate as many conditions as you would like. Let's see an example:
+                    </div>
+                    <div class="console">
+<pre>
+date = 28
+if date > 26 and date < 31:
+    print "Time for ALA Annual."
+elif date == 28:
+    print "Time for my preconference!"
+else:
+    print "Still time to pack!"
+</pre>
+
+                    </div>
+                    <div class="message">
+                    <h3>Functions</h3>
+                    <p>We've already talked briefly about simple functions when we discussed <code>type()</code>, but with Python you can write far more complicated functions than this. As with <code>type()</code>, many functions have already been written and can be called with their name. But, what if we want to write our own functions?</p>
+                    <p>It makes sense to write functions for activities that we will want to reuse. Functions start with a function signature which defines the function and tells you how it will be called and what argument(s) it takes. The second part of a function is the part that actually does work for you. It is indented just as we did with <code>if</code>/<code>elif</code>/<code>else</code> blocks. You already saw a few of these in the tutorial this morning, but let's take a look at an example of a function:</p>
+                    </div>
+                    <div class="console">
+<pre>
+def multiply(x, y):
+    result = x * y
+    return result
+<pre>
+                    </div>
+                    <div class="message">
+                    <p>Now let's try using our function:</p>
+                    </div>
+                    <div class="console">
+<pre>
+multiply(2, 3)
+</pre>
+                    </div>
+                    <div class="message">
+                    <p>While this is a very basic function, you can also write more complicated functions, as we will see later today.</p>
+                    </div>
                 </blockquote>
             </div>
         </blockquote>
@@ -181,7 +379,7 @@ len(todo_list)
                     </div>
                     <div class="message">
                         <p>
-                            What if we only want to tackle part of it?  We've seen how to access a single element (e.g. <code>todo_list[0]</code>).  If we're feeling like we can handle more than one thing on our to-do list right now, though, we can take a <span class="stickynote">slice</span>. 
+                            What if we only want to tackle part of it?  We've seen how to access a single element (e.g. <code>todo_list[0]</code>).  If we're feeling like we can handle more than one thing on our to-do list right now, though, we can take a <span class="stickynote">slice</span>.
                         </p>
                         <p>
                             Which elements do you think this will give us?  How many>
@@ -300,6 +498,214 @@ string[0:3]
                             <li><code>raw_input()</code></li>
                             </ul>
                     </div>
+
+		<div class="message">
+			<h3><code>for</code> real?</h3>
+
+				<p>
+					Lists are fine, lists are great, and you will be up to your ears in lists in your coding life. Here's the catch: a list can contain any number of elements, and more often than not you will have to look at each element and determine what to do with it.
+				</p>
+				<p>
+					Let's take a list:
+				</p>
+		</div>
+		<div class="console">
+			<pre>pie = ["strawberry", "blueberry", "raspberry"]</pre>
+		</div>
+
+		<div class="message">
+			<p>
+				So, how can I find out what's all in <code>pie</code>? Well, we could do this:
+			</p>
+		</div>
+
+		<div class="console">
+<pre>
+print pie[0]
+print pie[1]
+print pie [2]
+</pre>
+		</div>
+
+		<div class="messge">
+			<p>
+			It'll do the job, but do we really want to write the same code over and over again for each element? Do you like <span class="stickynote">RSIs</span>? I don't.
+			</p>
+			<div class="stickynote">
+			More information on RSIs at <a href="https://en.wikipedia.org/wiki/Repetitive_strain_injury">Wikipedia</a>. In short, they stink. Remember to take frequent breaks while programming!
+			</div>
+			<p>
+			Enter loops. Loops allow you to work through lists efficiently by only having to write one piece of code for all (or a subset of) the elements of a list. There are different types of loops that you can use for different situations. For our example, we will use the <code>for</code> loop.
+			</p>
+			<p>
+			And here it is! Do you know what's going on in the <code>for</code> loop below?
+			</p>
+		</div>
+
+		<div class="console">
+<pre>
+for fruit in pie:
+	print fruit
+</pre>
+		</div>
+
+		<div class="message">
+			<p>
+			The example above has a simple command, but we can do much more in loops. We can introduce other forms of flow control in loops. Do y'all remember <code>if…else</code> statements? You can use them in loops if you are looking for a particular condition with one or more of the elements in a list. Here's an example. What will happen?
+			</p>
+		</div>
+
+		<div message="console">
+<pre>
+for fruit in pie:
+	if fruit == "strawberry":
+		print "I like strawberry!"
+	else:
+		print fruit
+</pre>
+		</div>
+		<div class="message">
+		<p>
+			Better yet, you can put loops within loops! Loopception, if you will.
+			</p>
+			<p>
+			A wild list appears!
+			</p>
+			<div class="stickynote">
+				<a href="http://knowyourmeme.com/memes/its-super-effective">It's super effective!</a>
+			</div>
+		</div>
+
+		<div class="console">
+			<pre>approved_berries = ["strawberry", "currants", "elderberry"]
+			</pre>
+		</div>
+
+		<div class="message">
+			<p>
+			If I want to see if there are any elements in <code>approved_berries</code> in <code>pie</code>, what will it look like? Also, what"s up with that <code>i</code> there?
+			</p>
+		</div>
+
+		<div class="console">
+<pre>
+i = 0
+for fruit in pie:
+	for berry in approved_berries:
+		if fruit == berry:
+			i += 1
+print str(i) + ' approved berries in this pie'
+</pre>
+		</div>
+
+		<div class="message">
+			<h3>Home on the <code>range()</code></h3>
+				<p>
+				The <code>range()</code> function will help if you need to go through a series of numbers as well as lists. You can get fancy with <code>range()</code> but we'll stick to two ways you can use the function.
+				</p>
+				<p>
+				The first is your garden variety going through a series of numbers. You can either give an end number as a single parameter, or have both a beginning number and an end number as two parameters.
+				</p>
+		</div>
+
+		<div class="console">
+<pre>
+range(14)
+range(3,14)
+</pre>
+		</div>
+
+		<div class="message">
+			<p>
+			<code>range ()</code> also works on lists. Going back to our <code>pie</code> list, what berries will be printed out below?
+			</p>
+		</div>
+
+		<div class="console">
+<pre>
+for fruit in range(len(pie)):
+	print pie[fruit]
+</pre>
+		</div>
+
+		<div class="message">
+			<p>
+			Would this way of printing the list be any different from the first for code snippit above?
+			</p>
+		</div>
+
+		<div class="message">
+			<h3><code>while</code> you're here...</h3>
+				<p>
+				The other loop function you will find useful is <code>while</code>. It is also one of the functions that you will curse the most. Why? Run the following code. Surely nothing will go wrong if you just copy and paste a piece of code and run it, no questions asked…
+				</p>
+		</div>
+
+		<div class="console">
+<pre>
+i = 0
+infinite = True
+while infinite:
+	i += 1
+	print i
+</pre>
+		</div>
+
+		<div class="message">
+			<p>
+			The loop has nothing in there to tell it to stop on its own. This is called an <span class="stickynote">infinite loop</span>. How do you stop this abomination of system resources?
+			</p>
+			<div class="stickynote">
+				You might have other words for it once you delve deeper into loops. Words that are not appropriate in a professional setting.
+			</div>
+			<p>
+			<strong>control + c OR control + break (OR control + backslash on Mac, if the other two don't work)</strong>
+			</p>
+			<p>
+			Remember the above keystrokes. They kill running python processes. They also know where the digital bodies are buried.
+			</p>
+			<p>
+			How do we make sure that our <code>while</code> loop ends? We either need to find a way to make that <code>infinite</code> variable <code>False</code> or we need to insert a <code>break</code> function. <code>break</code> allows the script to exit the current loop. However, if we add either of those to the <code>while</code> code above, we'd only go through the loop once. What should we do?
+			</p>
+			<p>
+			Like the <code>for</code> loop function, we can use other flow control functions under the <code>while</code> loop, such as <code>if</code> statements. When will the loop break in the below code?
+			</p>
+		</div>
+
+		<div class="console">
+<pre>
+i = 0
+infinite = True
+while infinite:
+	i += 1
+	if i == 10:
+		break
+	else:
+		print i
+</pre>
+		</div>
+
+		<div class="message">
+			<h3>You can't handle the <code>raw_input()</code>!</h3>
+				<p>
+				Before we finish with this section of the lecture, there's one more function that you'll find useful when dealing with flow control. Sometimes you will need something from the person running the script in order for the script to then act on that information. <code>raw_input()</code> prompts the user to enter a value, which you can then store in a variable.
+				</p>
+				<p>
+				What answer does the user have to answer with to break the <code>while</code> loop?
+				</p>
+		</div>
+
+		<div class="console">
+<pre>
+answer = ""
+while answer != "yes":
+	answer = raw_input("Are you enjoying the workshop so far?")
+	if answer == "yes":
+		print "Glad to hear that!"
+	else:
+		print "You will enjoy it even if you aren't. Try again."
+</pre>
+		</div>
                 </blockquote>
             </div>
         </blockquote>
@@ -338,7 +744,7 @@ words = {
                     </div>
                     <div class="message">
                         <p>
-                            Like any other variable, we start by giving the dict a name and then an equals sign. Remember that a single equals <em>assigns</em> a variable's value, while multiple equals is used to <em>compare</em> a variable's value against something else. Dicts look very similar to arrays, except they use curly braces to enclose their contents rather than square brackets.
+                            Like any other variable, we start by giving the dict a name and then an equals sign. Remember that a single equals <em>assigns</em> a variable's value, while multiple equals is used to <em>compare</em> a variable's value against something else. Dicts look very similar to lists, except they use curly braces to enclose their contents rather than square brackets.
                         </p>
                         <p>
                             Now that we've got a dict with some items in it, how do we retrieve its values?
@@ -354,7 +760,7 @@ words = {
                     </div>
                     <div class="message">
                         <p>
-                            Again, there are similarities with arrays. We use bracket notation to specify which item we want to receive from the dict, but instead of using an integer like with arrays we use the key whose value we want.
+                            Again, there are similarities with lists. We use bracket notation to specify which item we want to receive from the dict, but instead of using an integer like with lists we use the key whose value we want.
                         </p>
                         <p>
                             Adding and altering items is easy, too.
@@ -372,9 +778,9 @@ words = {
                     </div>
                     <div class="message">
                         <p>
-                            Dicts come with a couple handy built-in functions: <code>keys()</code> returns an array of all the dict's keys, while <code>values()</code> returns an array of its—wait for it&hellip;—values.
+                            Dicts come with a couple handy built-in functions: <code>keys()</code> returns a list of all the dict's keys, while <code>values()</code> returns a list of its—wait for it&hellip;—values.
                         </p>
-                    </div>                
+                    </div>
                     <div class="console">
 <pre>
 >>> words.keys()
@@ -412,6 +818,11 @@ catalog = {
 'location_codes': [ 'stacks', 'reserves', 'special collections' ]
 }
 </pre>
+                    </div>
+                    <div class="message">
+                        <p>
+                            This dict implements a simple library catalog of sorts, using many of the data structures we're already familiar with.
+                        </p>
                     </div>
                 </blockquote>
             </div>
