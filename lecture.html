@@ -155,7 +155,7 @@ type(false)
 </pre>
                     </div>
                     <div class="message">
-                    <p>You'll notice a couple of things from these examples. First, notice that equality is tested with <code>==</code> as opposed to <code>=</code>. This is because <code>=</code> is used for assignment wherease <code>==</code> is used for comparison. You'll also notice that <code>!=</code> tests whether the two values are NOT equal to one another.
+                    <p>You'll notice a couple of things from these examples. First, notice that equality is tested with <code>==</code> as opposed to <code>=</code>. This is because <code>=</code> is used for assignment whereas <code>==</code> is used for comparison. You'll also notice that <code>!=</code> tests whether the two values are NOT equal to one another.
                     <p>In addition to equality and inequality, you can also test for greater than or less than. <,<=, >, and >= all mean exactly what you would expect.</p>
                     </div>
                     <div class="console">
@@ -176,7 +176,7 @@ if 2 > 1:
 </pre>
                     </div>
                     <div class="message">
-                    <p>Did that behave the way you expected it to? As you can see, how that we are writing multiple lines of code, indentations become important. You will need to indent the second line 4 spaces and you have to be careful that your indentations are always consistent. As you'll see, as soon as you type the first line, Python detects that your code will have multiple lines and prompts you with <code>...</code> instead of <code>>>></code>. When you click enter at the end of the code block, Python will evaluate the conditional statement and respond accordingly.</p>
+                    <p>Did that behave the way you expected it to? As you can see, now that we are writing multiple lines of code, indentations become important. You will need to indent the second line 4 spaces and you have to be careful that your indentations are always consistent. As you'll see, as soon as you type the first line, Python detects that your code will have multiple lines and prompts you with <code>...</code> instead of <code>>>></code>. When you click enter at the end of the code block, Python will evaluate the conditional statement and respond accordingly.</p>
 
                     <p>This allows us to evaluate conditional expressions, but it only allows us to respond to either the True or the False case. What if we want to execute code for more than one condition? To do this, we need to use <code>else</code> in addition to <code>if</code>.
                     </div>
@@ -220,14 +220,14 @@ else:
                     <div class="message">
                     <h3>Functions</h3>
                     <p>We've already talked briefly about simple functions when we discussed <code>type()</code>, but with Python you can write far more complicated functions than this. As with <code>type()</code>, many functions have already been written and can be called with their name. But, what if we want to write our own functions?</p>
-                    <p>It makes sense to write functions for activities that we will want to reuse. Functions start with a function signature which defines the function and tells you how it will be called and what argument(s) it takes. The second part of a function is the part that actually does work for you. It is indented just as we did with <code>if</code>/<code>elif</code>/<code>else</code> blocks. You already saw a few of these in the tutorial this morning, but let's take a look at an example of a function:</p>
+                    <p>It makes sense to write functions for activities that we will want to reuse. Functions start with a <span class="stickynote">function signature</span> which defines the function and tells you how it will be called and what <span class="stickynote">argument(s)</span> it takes. The second part of a function is the part that actually does work for you. It is indented just as we did with <code>if</code>/<code>elif</code>/<code>else</code> blocks. You already saw a few of these in the tutorial this morning, but let's take a look at an example of a function:</p>
                     </div>
                     <div class="console">
 <pre>
 def multiply(x, y):
     result = x * y
     return result
-<pre>
+</pre>
                     </div>
                     <div class="message">
                     <p>Now let's try using our function:</p>
@@ -382,7 +382,7 @@ len(todo_list)
                             What if we only want to tackle part of it?  We've seen how to access a single element (e.g. <code>todo_list[0]</code>).  If we're feeling like we can handle more than one thing on our to-do list right now, though, we can take a <span class="stickynote">slice</span>.
                         </p>
                         <p>
-                            Which elements do you think this will give us?  How many>
+                            Which elements do you think this will give us?  How many?
                         </p>
                     </div>
                     <div class="console">
@@ -394,6 +394,15 @@ todo_list[0:2]
                         <p>
                             Was that what you expected?  If not, what's actually going on here?
                         </p>
+                        <p>
+                            Here's why this is useful, by the way:
+                        </p>
+                    </div>
+                    <div class="console">
+<pre>
+todo_list[0:2] + todo_list[2:6]
+</pre>
+                    </div>
                         <p>
                             You can leave one of the slice parameters out and it still works.
                         </p>
@@ -418,7 +427,15 @@ todo_list[2:]
                     </div>
                     <div class="message">
                         <p>
-                            By the way, if you were wondering why our slice <I>does</I> include the first listed element but <I>doesn't</I> include the second, here's why. What is <code>todo_list[:2] + todo_list[2:]</code>?  That's right -- it's the whole list and just the list, without repeating <code>todo_list[2]</code>.
+                            By the way, this means you can do this too: 
+                    <div class="console">
+<pre>
+todo_list[:2] + todo_list[2:]
+</pre>
+                    </div>                            
+                    <div class="message">
+                        <p>
+                            So you don't have to know how long the list is for this trick to work.
                         </p>
                         <p>
                             Let's feel really accomplished by tackling the last item on our to-do list:
@@ -453,7 +470,7 @@ todo_list[-3:]
                             Mmmm, pie.
                         </div>
 <pre>
-string = "Pie, .py, or pi?"
+string = 'Pie, .py, or pi?'
 string[0]
 string[0:3]
 </pre>
@@ -528,12 +545,12 @@ print pie [2]
 		</div>
 
 		<div class="messge">
-			<p>
-			It'll do the job, but do we really want to write the same code over and over again for each element? Do you like <span class="stickynote">RSIs</span>? I don't.
-			</p>
 			<div class="stickynote">
 			More information on RSIs at <a href="https://en.wikipedia.org/wiki/Repetitive_strain_injury">Wikipedia</a>. In short, they stink. Remember to take frequent breaks while programming!
 			</div>
+			<p>
+			It'll do the job, but do we really want to write the same code over and over again for each element? Do you like <span class="stickynote">RSIs</span>? I don't.
+			</p>
 			<p>
 			Enter loops. Loops allow you to work through lists efficiently by only having to write one piece of code for all (or a subset of) the elements of a list. There are different types of loops that you can use for different situations. For our example, we will use the <code>for</code> loop.
 			</p>
@@ -545,7 +562,7 @@ print pie [2]
 		<div class="console">
 <pre>
 for fruit in pie:
-	print fruit
+    print fruit
 </pre>
 		</div>
 
@@ -568,12 +585,12 @@ for fruit in pie:
 		<p>
 			Better yet, you can put loops within loops! Loopception, if you will.
 			</p>
-			<p>
-			A wild list appears!
-			</p>
 			<div class="stickynote">
 				<a href="http://knowyourmeme.com/memes/its-super-effective">It's super effective!</a>
 			</div>
+			<p>
+			A wild list appears!
+			</p>
 		</div>
 
 		<div class="console">
@@ -583,7 +600,7 @@ for fruit in pie:
 
 		<div class="message">
 			<p>
-			If I want to see if there are any elements in <code>approved_berries</code> in <code>pie</code>, what will it look like? Also, what"s up with that <code>i</code> there?
+			If I want to see if there are any elements in <code>approved_berries</code> in <code>pie</code>, what will it look like? Also, what's up with that <code>i</code> there?
 			</p>
 		</div>
 
@@ -591,9 +608,9 @@ for fruit in pie:
 <pre>
 i = 0
 for fruit in pie:
-	for berry in approved_berries:
-		if fruit == berry:
-			i += 1
+    for berry in approved_berries:
+        if fruit == berry:
+            i += 1
 print str(i) + ' approved berries in this pie'
 </pre>
 		</div>
@@ -624,13 +641,13 @@ range(3,14)
 		<div class="console">
 <pre>
 for fruit in range(len(pie)):
-	print pie[fruit]
+    print pie[fruit]
 </pre>
 		</div>
 
 		<div class="message">
 			<p>
-			Would this way of printing the list be any different from the first for code snippit above?
+			Would this way of printing the list be any different from the first for code snippet above?
 			</p>
 		</div>
 
@@ -646,18 +663,18 @@ for fruit in range(len(pie)):
 i = 0
 infinite = True
 while infinite:
-	i += 1
-	print i
+    i += 1
+    print i
 </pre>
 		</div>
 
 		<div class="message">
-			<p>
-			The loop has nothing in there to tell it to stop on its own. This is called an <span class="stickynote">infinite loop</span>. How do you stop this abomination of system resources?
-			</p>
 			<div class="stickynote">
 				You might have other words for it once you delve deeper into loops. Words that are not appropriate in a professional setting.
 			</div>
+			<p>
+			The loop has nothing in there to tell it to stop on its own. This is called an <span class="stickynote">infinite loop</span>. How do you stop this abomination of system resources?
+			</p>
 			<p>
 			<strong>control + c OR control + break (OR control + backslash on Mac, if the other two don't work)</strong>
 			</p>
@@ -677,11 +694,11 @@ while infinite:
 i = 0
 infinite = True
 while infinite:
-	i += 1
-	if i == 10:
-		break
-	else:
-		print i
+    i += 1
+    if i == 10:
+        break
+    else:
+        print i
 </pre>
 		</div>
 
@@ -699,11 +716,11 @@ while infinite:
 <pre>
 answer = ""
 while answer != "yes":
-	answer = raw_input("Are you enjoying the workshop so far?")
-	if answer == "yes":
-		print "Glad to hear that!"
-	else:
-		print "You will enjoy it even if you aren't. Try again."
+    answer = raw_input("Are you enjoying the workshop so far?")
+    if answer == "yes":
+        print "Glad to hear that!"
+    else:
+        print "You will enjoy it even if you aren't. Try again."
 </pre>
 		</div>
                 </blockquote>
@@ -731,7 +748,7 @@ while answer != "yes":
                     </div>
                     <div class="message">
                         <p>
-                            <a href="http://docs.python.org/2/tutorial/datastructures.html#dictionaries" title="Dictionaries | Python Data Structures">Dictionaries</a>, abbreviated to "dicts" in Python-speak, are a set of key-value pairs much like a linguistic dictionary contains terms and their definitions. Dicts can be useful to store structured data or make difficult-to-remember values easier to access. Let's see how you make a new dict.
+                            <span class="stickynote"><a href="http://docs.python.org/2/tutorial/datastructures.html#dictionaries" title="Dictionaries | Python Data Structures">Dictionaries</a></span>, abbreviated to "<span class="stickynote">dicts</span>" in Python-speak, are a set of key-value pairs much like a linguistic dictionary contains terms and their definitions. Dicts can be useful to store structured data or make difficult-to-remember values easier to access. Let's see how you make a new dict.
                         </p>
                     </div>
                     <div class="console">
@@ -744,7 +761,7 @@ words = {
                     </div>
                     <div class="message">
                         <p>
-                            Like any other variable, we start by giving the dict a name and then an equals sign. Remember that a single equals <em>assigns</em> a variable's value, while multiple equals is used to <em>compare</em> a variable's value against something else. Dicts look very similar to lists, except they use curly braces to enclose their contents rather than square brackets.
+                            Like any other variable, we start by giving the dict a name and then an equals sign. Remember that a single equals <em>assigns</em> a variable's value, while multiple equals is used to <em>compare</em> a variable's value against something else. Dicts look very similar to <span class="stickynote">lists</span>, except they use curly braces to enclose their contents rather than square brackets.
                         </p>
                         <p>
                             Now that we've got a dict with some items in it, how do we retrieve its values?
